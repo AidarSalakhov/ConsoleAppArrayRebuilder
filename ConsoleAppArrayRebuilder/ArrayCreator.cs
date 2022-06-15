@@ -14,7 +14,7 @@ namespace ConsoleAppArrayRebuilder
         public static int[,] arrayRandomNumbers = new int[arrayHeigh, arrayLength];
 
 
-        public static int[,] CreateAndFillArray()
+        public static int[,] CreateAndFillArray(int arrayHeigh, int arrayLength)
         {
             Random random = new Random();
 
