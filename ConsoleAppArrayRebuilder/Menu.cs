@@ -22,6 +22,7 @@ namespace ConsoleAppArrayRebuilder
             switch (key)
             {
                 case ConsoleKey.O:
+
                     Console.Clear();
                     break;
 

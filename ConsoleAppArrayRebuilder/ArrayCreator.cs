@@ -8,21 +8,36 @@ namespace ConsoleAppArrayRebuilder
 {
     internal class ArrayCreator
     {
-        public static int[,] CreateArray(int heigh, int length)
+        
+        public static int arrayHeigh;
+        public static int arrayLength;
+        public static int[,] arrayRandomNumbers = new int[arrayHeigh, arrayLength];
+
+
+        public static int[,] CreateAndFillArray()
         {
             Random random = new Random();
 
-            int[,] array = new int[heigh,length];
-
-            for (int i = 0; i < heigh; i++)
+            for (int i = 0; i < arrayHeigh; i++)
             {
-                for (int j = 0; j < length; j++)
+                for (int j = 0; j < arrayLength; j++)
                 {
-                    array[i, j] = random.Next(100);
+                    arrayRandomNumbers[i, j] = random.Next(100);
                 }
             }
 
-            return array;
+            return arrayRandomNumbers;
+        }
+
+        public static void PrintArray()
+        {
+            for (int i = 0; i < arrayHeigh; i++)
+            {
+                for (int j = 0; j < arrayLength; j++)
+                {
+                    MessagesViewer.Default(Convert.ToString(arrayRandomNumbers[i,j]));
+                }
+            }
         }
     }
 }
