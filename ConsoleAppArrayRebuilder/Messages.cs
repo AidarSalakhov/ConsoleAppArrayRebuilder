@@ -14,6 +14,10 @@ namespace ConsoleAppArrayRebuilder
         public const string INFO_MENU_BUTTON_NX_ARRAY = "[N] - Создать и редактировать двумерный массив [X,Y]";
         public const string INFO_MENU_BUTTON_CLOSE_PROGRAM = "[Esc] - Выйти из программы";
 
+        public const string INFO_ENTER_ARRAY_HEIGH = "Введите количество строк массива:";
+        public const string INFO_ENTER_ARRAY_LENGTH = "Введите количество столбцов массива:";
+
+
         public const string ERROR_WRONG_BUTTON = "Вы нажали неверную кнопку";
 
     }

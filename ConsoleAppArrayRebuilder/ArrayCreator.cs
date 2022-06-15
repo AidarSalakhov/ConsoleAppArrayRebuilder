@@ -34,10 +34,24 @@ namespace ConsoleAppArrayRebuilder
             {
                 for (int j = 0; j < arrayRandomNumbers.GetLength(1); j++)
                 {
-                    MessagesViewer.Default($"[{Convert.ToString(arrayRandomNumbers[i,j])}] ");
+                    MessagesViewer.Default($"[{String.Format("{0:00}", arrayRandomNumbers[i,j])}] ");
                 }
+
                 MessagesViewer.Default("\n");
             }
+        }
+
+        public static int[,] CreateCustomArray()
+        {
+            MessagesViewer.Info(Messages.INFO_ENTER_ARRAY_HEIGH);
+
+            int arrayHeigh = Convert.ToInt32(Console.ReadLine());
+                
+            MessagesViewer.Info(Messages.INFO_ENTER_ARRAY_LENGTH);
+
+            int arrayLength = Convert.ToInt32(Console.ReadLine());
+
+            return CreateAndFillArray(arrayHeigh, arrayLength);
         }
     }
 }

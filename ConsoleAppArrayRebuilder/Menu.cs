@@ -23,7 +23,6 @@ namespace ConsoleAppArrayRebuilder
             switch (key)
             {
                 case ConsoleKey.O:
-
                     Console.Clear();
                     ArrayCreator.PrintArray(ArrayCreator.CreateAndFillArray(1, 5));
                     break;
@@ -35,6 +34,7 @@ namespace ConsoleAppArrayRebuilder
 
                 case ConsoleKey.N:
                     Console.Clear();
+                    ArrayCreator.PrintArray(ArrayCreator.CreateCustomArray());
                     break;
 
                 case ConsoleKey.Escape:
