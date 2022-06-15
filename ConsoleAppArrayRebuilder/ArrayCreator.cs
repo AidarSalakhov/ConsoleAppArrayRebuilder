@@ -9,18 +9,17 @@ namespace ConsoleAppArrayRebuilder
     internal class ArrayCreator
     {
         
-        public static int arrayHeigh;
-        public static int arrayLength;
-        public static int[,] arrayRandomNumbers = new int[arrayHeigh, arrayLength];
-
+        public static int[,] arrayRandomNumbers = new int[0, 0];
 
         public static int[,] CreateAndFillArray(int arrayHeigh, int arrayLength)
         {
+            arrayRandomNumbers = new int[arrayHeigh, arrayLength];
+
             Random random = new Random();
 
-            for (int i = 0; i < arrayHeigh; i++)
+            for (int i = 0; i < arrayRandomNumbers.GetLength(0); i++)
             {
-                for (int j = 0; j < arrayLength; j++)
+                for (int j = 0; j < arrayRandomNumbers.GetLength(1); j++)
                 {
                     arrayRandomNumbers[i, j] = random.Next(100);
                 }
@@ -29,14 +28,15 @@ namespace ConsoleAppArrayRebuilder
             return arrayRandomNumbers;
         }
 
-        public static void PrintArray()
+        public static void PrintArray(int[,] arrayRandomNumbers)
         {
-            for (int i = 0; i < arrayHeigh; i++)
+            for (int i = 0; i < arrayRandomNumbers.GetLength(0); i++)
             {
-                for (int j = 0; j < arrayLength; j++)
+                for (int j = 0; j < arrayRandomNumbers.GetLength(1); j++)
                 {
-                    MessagesViewer.Default(Convert.ToString(arrayRandomNumbers[i,j]));
+                    MessagesViewer.Default($"[{Convert.ToString(arrayRandomNumbers[i,j])}] ");
                 }
+                MessagesViewer.Default("\n");
             }
         }
     }

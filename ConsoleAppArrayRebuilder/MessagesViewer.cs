@@ -22,7 +22,7 @@ namespace ConsoleAppArrayRebuilder
         }
         public static void Default(string message)
         {
-            Console.WriteLine(message);
+            Console.Write(message);
         }
     }
 }

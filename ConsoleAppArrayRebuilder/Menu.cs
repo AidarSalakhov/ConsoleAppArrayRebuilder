@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace ConsoleAppArrayRebuilder
 {
@@ -24,10 +25,12 @@ namespace ConsoleAppArrayRebuilder
                 case ConsoleKey.O:
 
                     Console.Clear();
+                    ArrayCreator.PrintArray(ArrayCreator.CreateAndFillArray(1, 5));
                     break;
 
                 case ConsoleKey.T:
                     Console.Clear();
+                    ArrayCreator.PrintArray(ArrayCreator.CreateAndFillArray(3, 3));
                     break;
 
                 case ConsoleKey.N:
@@ -35,6 +38,7 @@ namespace ConsoleAppArrayRebuilder
                     break;
 
                 case ConsoleKey.Escape:
+                    Process.GetCurrentProcess().Kill();
                     break;
 
                 default:
@@ -43,6 +47,7 @@ namespace ConsoleAppArrayRebuilder
                     ShowMenu();
                     break;
             }
+            ShowMenu();
         }
     }
 }
