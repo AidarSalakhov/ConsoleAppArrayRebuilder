@@ -166,5 +166,19 @@ namespace ConsoleAppArrayRebuilder
 
             return newMinArray;
         }
+
+        public static int[] ZeroIfBigger9()
+        {
+            for (int i = 0; i < ArrayCreator.array1D.Length; i++)
+            {
+                if (ArrayCreator.array1D[i] > 9)
+                {
+                    ArrayCreator.array1D[i] = 0;
+                }
+            }
+            
+            return ArrayCreator.array1D;
+        }
     }
+
 }

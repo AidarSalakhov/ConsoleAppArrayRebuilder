@@ -110,6 +110,9 @@ namespace ConsoleAppArrayRebuilder
 
                 case ConsoleKey.D9:
                     Console.Clear();
+                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
+                    Array1D_Operations.ZeroIfBigger9();
+                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
                     break;
 
                 case ConsoleKey.Escape:
