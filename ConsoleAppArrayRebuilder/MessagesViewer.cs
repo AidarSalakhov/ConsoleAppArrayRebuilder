@@ -52,7 +52,8 @@ namespace ConsoleAppArrayRebuilder
             Console.WriteLine(Messages.INFO_1D_MENU_SORT_BY_DESC);
             Console.WriteLine(Messages.INFO_1D_MENU_SORT_ODD_EVEN);
             Console.WriteLine(Messages.INFO_1D_MENU_CHOSING_ELEMENT);
-            Console.WriteLine(Messages.INFO_1D_MENU_ODD_OR_EVEN);
+            Console.WriteLine(Messages.INFO_1D_MENU_EVEN);
+            Console.WriteLine(Messages.INFO_1D_MENU_ODD);
             Console.WriteLine(Messages.INFO_1D_MENU_DOUBLE_TO_ZERO);
         }
     }

@@ -98,9 +98,17 @@ namespace ConsoleAppArrayRebuilder
 
                 case ConsoleKey.D7:
                     Console.Clear();
+                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
+                    ArrayCreator.Print1DArray(Array1D_Operations.EvensArray());
                     break;
 
                 case ConsoleKey.D8:
+                    Console.Clear();
+                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
+                    ArrayCreator.Print1DArray(Array1D_Operations.OddsArray());
+                    break;
+
+                case ConsoleKey.D9:
                     Console.Clear();
                     break;
 

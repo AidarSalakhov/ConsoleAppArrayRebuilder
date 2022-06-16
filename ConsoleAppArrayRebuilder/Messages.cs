@@ -25,8 +25,9 @@ namespace ConsoleAppArrayRebuilder
         public const string INFO_1D_MENU_SORT_BY_DESC = "[5] - Программа отсортировывает массив по убыванию.";
         public const string INFO_1D_MENU_SORT_ODD_EVEN = "[6] - Отсортировать, так чтобы первыми в массиве шли четные числа, а после них нечетные.";
         public const string INFO_1D_MENU_CHOSING_ELEMENT = "----Выборка элементов----";
-        public const string INFO_1D_MENU_ODD_OR_EVEN = "[7] - Программа, которая по выбору пользователя выводит только четные или нечетные элементы массива.";
-        public const string INFO_1D_MENU_DOUBLE_TO_ZERO = "[8] - Программа, которая обнуляет двузначные элементы массива и выводит результат.";
+        public const string INFO_1D_MENU_EVEN = "[7] - Программа, которая по выбору пользователя выводит только четные элементы массива.";
+        public const string INFO_1D_MENU_ODD = "[8] - Программа, которая по выбору пользователя выводит только нечетные элементы массива.";
+        public const string INFO_1D_MENU_DOUBLE_TO_ZERO = "[9] - Программа, которая обнуляет двузначные элементы массива и выводит результат.";
 
         //Кнопка [1] Текст под кнопкой
         public const string SUM_EVEN = "Сумма чётных чисел массива:";

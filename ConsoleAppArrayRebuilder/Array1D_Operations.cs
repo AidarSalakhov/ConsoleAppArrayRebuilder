@@ -50,30 +50,7 @@ namespace ConsoleAppArrayRebuilder
 
         public static int EvenMin()
         {
-            int[] newArray = new int[ArrayCreator.array1D.Length];
-
-            int indexOfFirstZero = 0;
-
-            for (int i = 0, j = 0; i < ArrayCreator.array1D.Length; i++)
-            {
-                if (ArrayCreator.array1D[i] % 2 == 0)
-                {
-                    newArray[j] = ArrayCreator.array1D[i];
-                    j++;
-                }
-
-                if (newArray[j] == 0)
-                {
-                    indexOfFirstZero = Array.IndexOf(newArray, newArray[j]);
-                }
-            }
-
-            int[] newMinArray = new int[indexOfFirstZero];
-
-            for (int i = 0; i < newMinArray.Length; i++)
-            {
-                newMinArray[i] = newArray[i];
-            }
+            int [] newMinArray = EvensArray();
 
             return newMinArray.Min();
         }
@@ -128,6 +105,66 @@ namespace ConsoleAppArrayRebuilder
             ArrayCreator.array1D = newArray;
 
             return ArrayCreator.array1D;
+        }
+
+        public static int[] EvensArray()
+        {
+            int[] newArray = new int[ArrayCreator.array1D.Length];
+
+            int indexOfFirstZero = 0;
+
+            for (int i = 0, j = 0; i < ArrayCreator.array1D.Length; i++)
+            {
+                if (ArrayCreator.array1D[i] % 2 == 0)
+                {
+                    newArray[j] = ArrayCreator.array1D[i];
+                    j++;
+                }
+
+                if (newArray[j] == 0)
+                {
+                    indexOfFirstZero = Array.IndexOf(newArray, newArray[j]);
+                }
+            }
+
+            int[] newMinArray = new int[indexOfFirstZero];
+
+            for (int i = 0; i < newMinArray.Length; i++)
+            {
+                newMinArray[i] = newArray[i];
+            }
+
+            return newMinArray;
+        }
+
+        public static int[] OddsArray()
+        {
+            int[] newArray = new int[ArrayCreator.array1D.Length];
+
+            int indexOfFirstZero = 0;
+
+            for (int i = 0, j = 0; i < ArrayCreator.array1D.Length; i++)
+            {
+                if (ArrayCreator.array1D[i] % 2 != 0)
+                {
+                    newArray[j] = ArrayCreator.array1D[i];
+                    j++;
+                }
+
+                if (newArray[j] == 0)
+                {
+                    indexOfFirstZero = Array.IndexOf(newArray, newArray[j]);
+                }
+            }
+
+            int[] newMinArray = new int[indexOfFirstZero];
+
+            for (int i = 0; i < newMinArray.Length; i++)
+            {
+                newMinArray[i] = newArray[i];
+            }
+
+            return newMinArray;
         }
     }
 }
