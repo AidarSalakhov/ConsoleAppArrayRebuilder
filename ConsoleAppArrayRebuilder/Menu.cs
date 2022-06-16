@@ -91,6 +91,9 @@ namespace ConsoleAppArrayRebuilder
 
                 case ConsoleKey.D6:
                     Console.Clear();
+                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
+                    Array1D_Operations.SortFirstEvenThenOdd();
+                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
                     break;
 
                 case ConsoleKey.D7:

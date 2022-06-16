@@ -106,5 +106,28 @@ namespace ConsoleAppArrayRebuilder
             Array.Reverse(ArrayCreator.array1D);
             return ArrayCreator.array1D;
         }
+
+        public static int[] SortFirstEvenThenOdd()
+        {
+            int[] newArray = new int[ArrayCreator.array1D.Length];
+
+            for (int i = 0, j = 0, k = ArrayCreator.array1D.Length - 1; i < ArrayCreator.array1D.Length; i++)
+            {
+                if (ArrayCreator.array1D[i] % 2 == 0)
+                {
+                    newArray[j] = ArrayCreator.array1D[i];
+                    j++;
+                }
+                else
+                {
+                    newArray[k] = ArrayCreator.array1D[i];
+                    k--;
+                }
+            }
+
+            ArrayCreator.array1D = newArray;
+
+            return ArrayCreator.array1D;
+        }
     }
 }
