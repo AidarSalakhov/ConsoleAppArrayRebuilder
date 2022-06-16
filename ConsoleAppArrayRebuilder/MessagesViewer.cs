@@ -56,5 +56,18 @@ namespace ConsoleAppArrayRebuilder
             Console.WriteLine(Messages.INFO_1D_MENU_ODD);
             Console.WriteLine(Messages.INFO_1D_MENU_DOUBLE_TO_ZERO);
         }
+
+        public static void Show2DMenuText()
+        {
+            Console.WriteLine("\n");
+            Console.WriteLine(Messages.INFO_2D_MENU_CHANGE_1_AND_3_LINES);
+            Console.WriteLine(Messages.INFO_2D_MENU_SUM_OF_BIGGER_THEN_9);
+            Console.WriteLine(Messages.INFO_2D_MENU_SUM_OF_ELEMENTS_MULTIPLE_5);
+            Console.WriteLine(Messages.INFO_2D_MENU_CHANGE_1_AND_3_COLUMN);
+            Console.WriteLine(Messages.INFO_2D_MENU_TO_ZERO_IF_UNDER_MAIN_DIAGONAL);
+            Console.WriteLine(Messages.INFO_2D_MENU_TO_ZERO_ABOVE_MAIN_DIAGONAL);
+            Console.WriteLine(Messages.INFO_2D_MENU_TO_ZERO_IF_UNDER_SECONDARY_DIAGONAL);
+            Console.WriteLine(Messages.INFO_2D_MENU_TO_ZERO_IF_ABOVE_SECONDARY_DIAGONAL);
+        }
     }
 }

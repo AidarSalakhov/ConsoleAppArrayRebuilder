@@ -14,6 +14,8 @@ namespace ConsoleAppArrayRebuilder
         public const string INFO_MENU_BUTTON_CREATE_2D_ARRAY = "[T] - Создать и редактировать двумерный массив [3,3]";
         public const string INFO_MENU_BUTTON_CREATE_SUPER_2D_ARRAY = "[N] - Создать и редактировать двумерный массив [X,Y]";
         public const string INFO_MENU_BUTTON_CLOSE_PROGRAM = "[Esc] - Выйти из программы";
+        //------------
+
 
         //Кнопка [O] Меню действий для одномерного массива
         public const string INFO_1D_MENU_SIMPLE_SEARCH = "----Простой поиск----";
@@ -36,6 +38,19 @@ namespace ConsoleAppArrayRebuilder
         //Кнопка [3] Текст под кнопкой
         public const string EVEN_MIN = "Чётный минимальный:";
         public const string ODD_MAX = "Нечётный максимальный:";
+        //------------
+
+
+        //Кнопка [T] Меню действий для двумерного массива 3х3
+        public const string INFO_2D_MENU_CHANGE_1_AND_3_LINES = "[1] - Поменять местами элементы 1-й и 3-й строк, вывести результат.";
+        public const string INFO_2D_MENU_SUM_OF_BIGGER_THEN_9 = "[2] - Найти сумму всех двузначных элементов.";
+        public const string INFO_2D_MENU_SUM_OF_ELEMENTS_MULTIPLE_5 = "[3] - Найти сумму всех элементов, кратных 5.";
+        public const string INFO_2D_MENU_CHANGE_1_AND_3_COLUMN = "[4] - Поменять местами элементы 1-го и 3-го столбцов, вывести результат.";
+        public const string INFO_2D_MENU_TO_ZERO_IF_UNDER_MAIN_DIAGONAL = "[5] - Обнулить элементы ниже главной диагонали.";
+        public const string INFO_2D_MENU_TO_ZERO_ABOVE_MAIN_DIAGONAL = "[6] - Обнулить эл. выше главной диагонали.";
+        public const string INFO_2D_MENU_TO_ZERO_IF_UNDER_SECONDARY_DIAGONAL = "[7] - Обнулить эл. элементы ниже побочной диагонали.";
+        public const string INFO_2D_MENU_TO_ZERO_IF_ABOVE_SECONDARY_DIAGONAL = "[8] - Обнулить эл. выше побочной диагонали.";
+        //------------
 
         //Задание размерности двумерного супер-массива
         public const string INFO_ENTER_ARRAY_HEIGH = "Введите количество строк массива:";

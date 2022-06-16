@@ -26,6 +26,7 @@ namespace ConsoleAppArrayRebuilder
                 case ConsoleKey.T:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.CreateAndFill2DArray(3, 3));
+                    Show2DMenu();
                     break;
 
                 case ConsoleKey.N:
@@ -126,5 +127,75 @@ namespace ConsoleAppArrayRebuilder
             }
             ShowMainMenu();
         }
+
+        public static void Show2DMenu()
+        {
+            MessagesViewer.Show2DMenuText();
+
+            ConsoleKey key = Console.ReadKey(true).Key;
+
+            switch (key)
+            {
+                case ConsoleKey.D1:
+                    Console.Clear();
+                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
+                    
+                    break;
+
+                case ConsoleKey.D2:
+                    Console.Clear();
+                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
+
+                    break;
+
+                case ConsoleKey.D3:
+                    Console.Clear();
+                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
+
+                    break;
+
+                case ConsoleKey.D4:
+                    Console.Clear();
+                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
+
+
+                    break;
+
+                case ConsoleKey.D5:
+                    Console.Clear();
+                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
+
+                    break;
+
+                case ConsoleKey.D6:
+                    Console.Clear();
+                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
+
+                    break;
+
+                case ConsoleKey.D7:
+                    Console.Clear();
+                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
+
+                    break;
+
+                case ConsoleKey.D8:
+                    Console.Clear();
+                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
+
+                    break;
+                                   
+                case ConsoleKey.Escape:
+                    Process.GetCurrentProcess().Kill();
+                    break;
+
+                default:
+                    Console.Clear();
+                    MessagesViewer.Error(Messages.ERROR_WRONG_BUTTON);
+                    break;
+            }
+            ShowMainMenu();
+        }
+
     }
 }
