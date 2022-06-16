@@ -9,7 +9,7 @@ namespace ConsoleAppArrayRebuilder
 {
     internal class Menu
     {
-        public static void ShowMenu()
+        public static void ShowMainMenu()
         {
             MessagesViewer.ShowMenuText();
 
@@ -42,7 +42,7 @@ namespace ConsoleAppArrayRebuilder
                     MessagesViewer.Error(Messages.ERROR_WRONG_BUTTON);
                     break;
             }
-            ShowMenu();
+            ShowMainMenu();
         }
 
         public static void Show1DMenu()
@@ -76,10 +76,17 @@ namespace ConsoleAppArrayRebuilder
 
                 case ConsoleKey.D4:
                     Console.Clear();
+                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
+                    Array1D_Operations.SortFromMinToMAx();
+                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
+                    
                     break;
 
                 case ConsoleKey.D5:
                     Console.Clear();
+                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
+                    Array1D_Operations.SortFromMaxToMin();
+                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
                     break;
 
                 case ConsoleKey.D6:
@@ -103,7 +110,7 @@ namespace ConsoleAppArrayRebuilder
                     MessagesViewer.Error(Messages.ERROR_WRONG_BUTTON);
                     break;
             }
-            ShowMenu();
+            ShowMainMenu();
         }
     }
 }

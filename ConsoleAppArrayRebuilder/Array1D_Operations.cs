@@ -93,5 +93,18 @@ namespace ConsoleAppArrayRebuilder
 
             return newArray.Max();
         }
+
+        public static int[] SortFromMinToMAx()
+        {
+            Array.Sort(ArrayCreator.array1D);
+            return ArrayCreator.array1D;
+        }
+        
+        public static int[] SortFromMaxToMin()
+        {
+            SortFromMinToMAx();
+            Array.Reverse(ArrayCreator.array1D);
+            return ArrayCreator.array1D;
+        }
     }
 }
