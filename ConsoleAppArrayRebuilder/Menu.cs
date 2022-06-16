@@ -11,12 +11,7 @@ namespace ConsoleAppArrayRebuilder
     {
         public static void ShowMenu()
         {
-            MessagesViewer.Info(Constants.PROGRAM_NAME);
-            MessagesViewer.Info(Messages.INFO_MENU_CHOOSE_ACTION);
-            MessagesViewer.Info(Messages.INFO_MENU_BUTTON_CREATE_1D_ARRAY);
-            MessagesViewer.Info(Messages.INFO_MENU_BUTTON_CREATE_2D_ARRAY);
-            MessagesViewer.Info(Messages.INFO_MENU_BUTTON_CREATE_SUPER_2D_ARRAY);
-            MessagesViewer.Info(Messages.INFO_MENU_BUTTON_CLOSE_PROGRAM);
+            MessagesViewer.ShowMenuText();
 
             ConsoleKey key = Console.ReadKey(true).Key;
 
@@ -25,6 +20,7 @@ namespace ConsoleAppArrayRebuilder
                 case ConsoleKey.O:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.CreateAndFill1DArray(5));
+                    Show1DMenu();
                     break;
 
                 case ConsoleKey.T:
@@ -44,7 +40,61 @@ namespace ConsoleAppArrayRebuilder
                 default:
                     Console.Clear();
                     MessagesViewer.Error(Messages.ERROR_WRONG_BUTTON);
-                    ShowMenu();
+                    break;
+            }
+            ShowMenu();
+        }
+
+        public static void Show1DMenu()
+        {
+            MessagesViewer.Show1DMenuText();
+
+            ConsoleKey key = Console.ReadKey(true).Key;
+
+            switch (key)
+            {
+                case ConsoleKey.D1:
+                    Console.Clear();
+                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
+                    MessagesViewer.WriteLine($"{Messages.SUM_EVEN}{Array1D_Operations.SumOfEven()}");
+                    MessagesViewer.WriteLine($"{Messages.SUM_ODD}{Array1D_Operations.SumOfOdd()}");
+                    break;
+
+                case ConsoleKey.D2:
+                    Console.Clear();
+                    break;
+
+                case ConsoleKey.D3:
+                    Console.Clear();
+                    break;
+
+                case ConsoleKey.D4:
+                    Console.Clear();
+                    break;
+
+                case ConsoleKey.D5:
+                    Console.Clear();
+                    break;
+
+                case ConsoleKey.D6:
+                    Console.Clear();
+                    break;
+
+                case ConsoleKey.D7:
+                    Console.Clear();
+                    break;
+
+                case ConsoleKey.D8:
+                    Console.Clear();
+                    break;
+
+                case ConsoleKey.Escape:
+                    Process.GetCurrentProcess().Kill();
+                    break;
+
+                default:
+                    Console.Clear();
+                    MessagesViewer.Error(Messages.ERROR_WRONG_BUTTON);
                     break;
             }
             ShowMenu();

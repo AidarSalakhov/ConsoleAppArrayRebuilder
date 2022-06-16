@@ -17,6 +17,22 @@ namespace ConsoleAppArrayRebuilder
         public const string INFO_ENTER_ARRAY_HEIGH = "Введите количество строк массива:";
         public const string INFO_ENTER_ARRAY_LENGTH = "Введите количество столбцов массива:";
 
+        public const string INFO_1D_MENU_SIMPLE_SEARCH = "----Простой поиск----";
+        public const string INFO_1D_MENU_EVEN_ODD_SUM = "[1] - Найти сумму четных и сумму нечетных элементов массива.";
+        public const string INFO_1D_MENU_MIN_MAX = "[2] - Найти в массиве минимальный и максимальный элементы, поменять их местами, вывести результат.";
+        public const string INFO_1D_MENU_MIN_EVEN_MAX_ODD = "[3] - Найти и вывести на экран в массиве четный минимальный и нечетный максимальный элементы.";
+        public const string INFO_1D_MENU_SIMPLED_SORT = "----Простая сортировка----";
+        public const string INFO_1D_MENU_SORT_BY_GROWTH = "[4] - Программа отсортировывает массив по возрастанию.";
+        public const string INFO_1D_MENU_SORT_BY_DESC = "[5] - Программа отсортировывает массив по убыванию.";
+        public const string INFO_1D_MENU_SORT_ODD_EVEN = "[6] - Отсортировать, так чтобы первыми в массиве шли четные числа, а после них нечетные.";
+        public const string INFO_1D_MENU_CHOSING_ELEMENT = "----Выборка элементов----";
+        public const string INFO_1D_MENU_ODD_OR_EVEN = "[7] - Программа, которая по выбору пользователя выводит только четные или нечетные элементы массива.";
+        public const string INFO_1D_MENU_DOUBLE_TO_ZERO = "[8] - Программа, которая обнуляет двузначные элементы массива и выводит результат.";
+
+        public const string SUM_EVEN = "Сумма чётных чисел массива:";
+        public const string SUM_ODD = "Сумма нечётных чисел массива:";
+
+
 
         public const string ERROR_WRONG_BUTTON = "Вы нажали неверную кнопку";
 
