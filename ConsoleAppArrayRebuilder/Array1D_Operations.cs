@@ -50,8 +50,7 @@ namespace ConsoleAppArrayRebuilder
 
         public static int EvenMin()
         {
-            int [] newMinArray = EvensArray();
-
+            int [] newMinArray = CreateEvensArray();
             return newMinArray.Min();
         }
 
@@ -67,11 +66,10 @@ namespace ConsoleAppArrayRebuilder
                     j++;
                 }
             }
-
             return newArray.Max();
         }
 
-        public static int[] SortFromMinToMAx()
+        public static int[] SortFromMinToMax()
         {
             Array.Sort(ArrayCreator.array1D);
             return ArrayCreator.array1D;
@@ -79,7 +77,7 @@ namespace ConsoleAppArrayRebuilder
         
         public static int[] SortFromMaxToMin()
         {
-            SortFromMinToMAx();
+            SortFromMinToMax();
             Array.Reverse(ArrayCreator.array1D);
             return ArrayCreator.array1D;
         }
@@ -101,16 +99,13 @@ namespace ConsoleAppArrayRebuilder
                     k--;
                 }
             }
-
             ArrayCreator.array1D = newArray;
-
             return ArrayCreator.array1D;
         }
 
-        public static int[] EvensArray()
+        public static int[] CreateEvensArray()
         {
             int[] newArray = new int[ArrayCreator.array1D.Length];
-
             int indexOfFirstZero = 0;
 
             for (int i = 0, j = 0; i < ArrayCreator.array1D.Length; i++)
@@ -122,25 +117,20 @@ namespace ConsoleAppArrayRebuilder
                 }
 
                 if (newArray[j] == 0)
-                {
                     indexOfFirstZero = Array.IndexOf(newArray, newArray[j]);
-                }
             }
 
             int[] newMinArray = new int[indexOfFirstZero];
 
             for (int i = 0; i < newMinArray.Length; i++)
-            {
                 newMinArray[i] = newArray[i];
-            }
 
             return newMinArray;
         }
 
-        public static int[] OddsArray()
+        public static int[] CreateOddsArray()
         {
             int[] newArray = new int[ArrayCreator.array1D.Length];
-
             int indexOfFirstZero = 0;
 
             for (int i = 0, j = 0; i < ArrayCreator.array1D.Length; i++)
@@ -152,31 +142,24 @@ namespace ConsoleAppArrayRebuilder
                 }
 
                 if (newArray[j] == 0)
-                {
                     indexOfFirstZero = Array.IndexOf(newArray, newArray[j]);
-                }
             }
 
             int[] newMinArray = new int[indexOfFirstZero];
 
             for (int i = 0; i < newMinArray.Length; i++)
-            {
                 newMinArray[i] = newArray[i];
-            }
 
             return newMinArray;
         }
 
-        public static int[] ZeroIfBigger9()
+        public static int[] ToZeroIfBiggerThen9()
         {
             for (int i = 0; i < ArrayCreator.array1D.Length; i++)
             {
                 if (ArrayCreator.array1D[i] > 9)
-                {
                     ArrayCreator.array1D[i] = 0;
-                }
             }
-            
             return ArrayCreator.array1D;
         }
     }

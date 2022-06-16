@@ -77,7 +77,7 @@ namespace ConsoleAppArrayRebuilder
                 case ConsoleKey.D4:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    Array1D_Operations.SortFromMinToMAx();
+                    Array1D_Operations.SortFromMinToMax();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
                     
                     break;
@@ -99,19 +99,19 @@ namespace ConsoleAppArrayRebuilder
                 case ConsoleKey.D7:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    ArrayCreator.Print1DArray(Array1D_Operations.EvensArray());
+                    ArrayCreator.Print1DArray(Array1D_Operations.CreateEvensArray());
                     break;
 
                 case ConsoleKey.D8:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    ArrayCreator.Print1DArray(Array1D_Operations.OddsArray());
+                    ArrayCreator.Print1DArray(Array1D_Operations.CreateOddsArray());
                     break;
 
                 case ConsoleKey.D9:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    Array1D_Operations.ZeroIfBigger9();
+                    Array1D_Operations.ToZeroIfBiggerThen9();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
                     break;
 
