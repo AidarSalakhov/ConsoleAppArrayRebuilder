@@ -62,10 +62,16 @@ namespace ConsoleAppArrayRebuilder
 
                 case ConsoleKey.D2:
                     Console.Clear();
+                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
+                    Array1D_Operations.ReplaceMinAndMax();
+                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
                     break;
 
                 case ConsoleKey.D3:
                     Console.Clear();
+                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
+                    MessagesViewer.WriteLine($"{Messages.EVEN_MIN}{Array1D_Operations.EvenMin()}");
+                    MessagesViewer.WriteLine($"{Messages.ODD_MAX}{Array1D_Operations.OddMax()}");
                     break;
 
                 case ConsoleKey.D4:

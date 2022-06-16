@@ -14,7 +14,7 @@ namespace ConsoleAppArrayRebuilder
 
             for (int i = 0; i < ArrayCreator.array1D.Length; i++)
             {
-                if (ArrayCreator.array1D[i]%2 == 0)
+                if (ArrayCreator.array1D[i] % 2 == 0)
                     evenCount += ArrayCreator.array1D[i];
             }
 
@@ -32,6 +32,66 @@ namespace ConsoleAppArrayRebuilder
             }
 
             return oddCount;
+        }
+
+        public static int[] ReplaceMinAndMax()
+        {
+            int min = ArrayCreator.array1D.Min();
+            int max = ArrayCreator.array1D.Max();
+
+            int indexOfMin = Array.IndexOf(ArrayCreator.array1D, min);
+            int indexOfMax = Array.IndexOf(ArrayCreator.array1D, max);
+
+            ArrayCreator.array1D[indexOfMin] = max;
+            ArrayCreator.array1D[indexOfMax] = min;
+
+            return ArrayCreator.array1D;
+        }
+
+        public static int EvenMin()
+        {
+            int[] newArray = new int[ArrayCreator.array1D.Length];
+
+            int indexOfFirstZero = 0;
+
+            for (int i = 0, j = 0; i < ArrayCreator.array1D.Length; i++)
+            {
+                if (ArrayCreator.array1D[i] % 2 == 0)
+                {
+                    newArray[j] = ArrayCreator.array1D[i];
+                    j++;
+                }
+
+                if (newArray[j] == 0)
+                {
+                    indexOfFirstZero = Array.IndexOf(newArray, newArray[j]);
+                }
+            }
+
+            int[] newMinArray = new int[indexOfFirstZero];
+
+            for (int i = 0; i < newMinArray.Length; i++)
+            {
+                newMinArray[i] = newArray[i];
+            }
+
+            return newMinArray.Min();
+        }
+
+        public static int OddMax()
+        {
+            int[] newArray = new int[ArrayCreator.array1D.Length];
+
+            for (int i = 0, j = 0; i < ArrayCreator.array1D.Length; i++)
+            {
+                if (ArrayCreator.array1D[i] % 2 != 0)
+                {
+                    newArray[j] = ArrayCreator.array1D[i];
+                    j++;
+                }
+            }
+
+            return newArray.Max();
         }
     }
 }
