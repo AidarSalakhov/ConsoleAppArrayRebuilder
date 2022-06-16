@@ -13,9 +13,9 @@ namespace ConsoleAppArrayRebuilder
         {
             MessagesViewer.Info(Constants.PROGRAM_NAME);
             MessagesViewer.Info(Messages.INFO_MENU_CHOOSE_ACTION);
-            MessagesViewer.Info(Messages.INFO_MENU_BUTTON_N1_ARRAY);
-            MessagesViewer.Info(Messages.INFO_MENU_BUTTON_N2_ARRAY);
-            MessagesViewer.Info(Messages.INFO_MENU_BUTTON_NX_ARRAY);
+            MessagesViewer.Info(Messages.INFO_MENU_BUTTON_CREATE_1D_ARRAY);
+            MessagesViewer.Info(Messages.INFO_MENU_BUTTON_CREATE_2D_ARRAY);
+            MessagesViewer.Info(Messages.INFO_MENU_BUTTON_CREATE_SUPER_2D_ARRAY);
             MessagesViewer.Info(Messages.INFO_MENU_BUTTON_CLOSE_PROGRAM);
 
             ConsoleKey key = Console.ReadKey(true).Key;
@@ -24,17 +24,17 @@ namespace ConsoleAppArrayRebuilder
             {
                 case ConsoleKey.O:
                     Console.Clear();
-                    ArrayCreator.PrintArray(ArrayCreator.CreateAndFillArray(1, 5));
+                    ArrayCreator.Print1DArray(ArrayCreator.CreateAndFill1DArray(5));
                     break;
 
                 case ConsoleKey.T:
                     Console.Clear();
-                    ArrayCreator.PrintArray(ArrayCreator.CreateAndFillArray(3, 3));
+                    ArrayCreator.Print2DArray(ArrayCreator.CreateAndFill2DArray(3, 3));
                     break;
 
                 case ConsoleKey.N:
                     Console.Clear();
-                    ArrayCreator.PrintArray(ArrayCreator.CreateCustomArray());
+                    ArrayCreator.Print2DArray(ArrayCreator.Create2DSuperArray());
                     break;
 
                 case ConsoleKey.Escape:
