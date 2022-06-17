@@ -179,13 +179,15 @@ namespace ConsoleAppArrayRebuilder
                 case ConsoleKey.D7:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
-
+                    Array2D_Operations.ToZeroIfUnderSecondaryDiagonal();
+                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     break;
 
                 case ConsoleKey.D8:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
-
+                    Array2D_Operations.ToZeroIfAboveSecondaryDiagonal();
+                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     break;
                                    
                 case ConsoleKey.Escape:

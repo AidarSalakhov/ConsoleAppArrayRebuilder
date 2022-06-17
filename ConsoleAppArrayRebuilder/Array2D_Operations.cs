@@ -95,5 +95,38 @@ namespace ConsoleAppArrayRebuilder
             return ArrayCreator.array2D;
         }
 
+        public static int[,] ToZeroIfUnderSecondaryDiagonal()
+        {
+            int[,] newArray = new int[ArrayCreator.array2D.GetLength(0), ArrayCreator.array2D.GetLength(1)];
+
+            for (int i = 0, z = ArrayCreator.array2D.GetLength(1); i < ArrayCreator.array2D.GetLength(0); i++, z--)
+            {
+                for (int k = 0; k < z; k++)
+                    newArray[i, k] = ArrayCreator.array2D[i, k];
+
+                for (int j = z; j < ArrayCreator.array2D.GetLength(1); j++)
+                    newArray[i, j] = 0;
+            }
+
+            ArrayCreator.array2D = newArray;
+            return ArrayCreator.array2D;
+        }
+
+        public static int[,] ToZeroIfAboveSecondaryDiagonal()
+        {
+            int[,] newArray = new int[ArrayCreator.array2D.GetLength(0), ArrayCreator.array2D.GetLength(1)];
+
+            for (int i = 0, z = ArrayCreator.array2D.GetLength(1) - 1; i < ArrayCreator.array2D.GetLength(0); i++, z--)
+            {
+                for (int k = 0; k < z; k++)
+                    newArray[i, k] = 0;
+                
+                for (int j = z; j < ArrayCreator.array2D.GetLength(1); j++)
+                    newArray[i, j] = ArrayCreator.array2D[i, j];
+            }
+
+            ArrayCreator.array2D = newArray;
+            return ArrayCreator.array2D;
+        }
     }
 }
