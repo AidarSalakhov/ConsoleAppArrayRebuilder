@@ -47,5 +47,19 @@ namespace ConsoleAppArrayRebuilder
 
             return sumOfNumbers;
         }
+
+        public static int[,] Replace1And3Colums()
+        {
+            int[,] newArray = new int[ArrayCreator.array2D.GetLength(0), ArrayCreator.array2D.GetLength(1)];
+
+            for (int i = 0; i < ArrayCreator.array2D.GetLength(0); i++)
+            {
+                for (int j = ArrayCreator.array2D.GetLength(1) - 1, k = 0; j >= 0; j--, k++)
+                    newArray[i, k] = ArrayCreator.array2D[i, j];
+            }
+                
+            ArrayCreator.array2D = newArray;
+            return ArrayCreator.array2D;
+        }
     }
 }
