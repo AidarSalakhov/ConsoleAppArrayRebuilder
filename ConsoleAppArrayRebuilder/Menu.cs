@@ -146,13 +146,13 @@ namespace ConsoleAppArrayRebuilder
                 case ConsoleKey.D2:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
-
+                    MessagesViewer.WriteLine($"{Messages.SUM_NUMBERS_BIGGER_THEN_9}{Array2D_Operations.SumOfNumbersBiggerThen9()}");
                     break;
 
                 case ConsoleKey.D3:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
-
+                    MessagesViewer.WriteLine($"{Messages.SUM_NUMBERS_MULTIPLE_5}{Array2D_Operations.SumOfNumbersMultiple5()}");
                     break;
 
                 case ConsoleKey.D4:

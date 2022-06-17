@@ -8,16 +8,16 @@ namespace ConsoleAppArrayRebuilder
 {
     internal class Messages
     {
-        //Главное меню
+        //Главное меню/////////////////
         public const string INFO_MENU_CHOOSE_ACTION = "---------------Выберите действие---------------";
         public const string INFO_MENU_BUTTON_CREATE_1D_ARRAY = "[O] - Создать и редактировать одномерный массив [5]";
         public const string INFO_MENU_BUTTON_CREATE_2D_ARRAY = "[T] - Создать и редактировать двумерный массив [3,3]";
         public const string INFO_MENU_BUTTON_CREATE_SUPER_2D_ARRAY = "[N] - Создать и редактировать двумерный массив [X,Y]";
         public const string INFO_MENU_BUTTON_CLOSE_PROGRAM = "[Esc] - Выйти из программы";
-        //------------
+        //////////////////////////////////
 
 
-        //Кнопка [O] Меню действий для одномерного массива
+        //Кнопка [O] Меню действий для одномерного массива/////////////////
         public const string INFO_1D_MENU_SIMPLE_SEARCH = "----Простой поиск----";
         public const string INFO_1D_MENU_EVEN_ODD_SUM = "[1] - Найти сумму четных и сумму нечетных элементов массива.";
         public const string INFO_1D_MENU_MIN_MAX = "[2] - Найти в массиве минимальный и максимальный элементы, поменять их местами, вывести результат.";
@@ -32,16 +32,16 @@ namespace ConsoleAppArrayRebuilder
         public const string INFO_1D_MENU_DOUBLE_TO_ZERO = "[9] - Программа, которая обнуляет двузначные элементы массива и выводит результат.";
 
         //Кнопка [1] Текст под кнопкой
-        public const string SUM_EVEN = "Сумма чётных чисел массива:";
-        public const string SUM_ODD = "Сумма нечётных чисел массива:";
+        public const string SUM_EVEN = "Сумма чётных чисел массива: ";
+        public const string SUM_ODD = "Сумма нечётных чисел массива: ";
 
         //Кнопка [3] Текст под кнопкой
-        public const string EVEN_MIN = "Чётный минимальный:";
-        public const string ODD_MAX = "Нечётный максимальный:";
-        //------------
+        public const string EVEN_MIN = "Чётный минимальный: ";
+        public const string ODD_MAX = "Нечётный максимальный: ";
+        //////////////////////////////////
 
 
-        //Кнопка [T] Меню действий для двумерного массива 3х3
+        //Кнопка [T] Меню действий для двумерного массива 3х3//////////////////////////////////
         public const string INFO_2D_MENU_CHANGE_1_AND_3_LINES = "[1] - Поменять местами элементы 1-й и 3-й строк, вывести результат.";
         public const string INFO_2D_MENU_SUM_OF_BIGGER_THEN_9 = "[2] - Найти сумму всех двузначных элементов.";
         public const string INFO_2D_MENU_SUM_OF_ELEMENTS_MULTIPLE_5 = "[3] - Найти сумму всех элементов, кратных 5.";
@@ -50,7 +50,14 @@ namespace ConsoleAppArrayRebuilder
         public const string INFO_2D_MENU_TO_ZERO_ABOVE_MAIN_DIAGONAL = "[6] - Обнулить эл. выше главной диагонали.";
         public const string INFO_2D_MENU_TO_ZERO_IF_UNDER_SECONDARY_DIAGONAL = "[7] - Обнулить эл. элементы ниже побочной диагонали.";
         public const string INFO_2D_MENU_TO_ZERO_IF_ABOVE_SECONDARY_DIAGONAL = "[8] - Обнулить эл. выше побочной диагонали.";
-        //------------
+
+        //Кнопка [2] Текст под кнопкой
+        public const string SUM_NUMBERS_BIGGER_THEN_9 = "Сумма всех двузначных элементов: ";
+
+        //Кнопка [3] Текст под кнопкой
+        public const string SUM_NUMBERS_MULTIPLE_5 = "Сумма всех элементов, кратных 5: ";
+
+        ///////////////////////////////////////////////////
 
         //Задание размерности двумерного супер-массива
         public const string INFO_ENTER_ARRAY_HEIGH = "Введите количество строк массива:";

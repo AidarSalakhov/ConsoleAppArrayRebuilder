@@ -21,5 +21,31 @@ namespace ConsoleAppArrayRebuilder
             ArrayCreator.array2D = newArray;
             return ArrayCreator.array2D;
         }
+
+        public static int SumOfNumbersBiggerThen9()
+        {
+            int sumOfNumbers = 0;
+
+            foreach (var item in ArrayCreator.array2D)
+            {
+                if (item > 9)
+                    sumOfNumbers += item;
+            }
+
+            return sumOfNumbers;
+        }
+
+        public static int SumOfNumbersMultiple5()
+        {
+            int sumOfNumbers = 0;
+
+            foreach (var item in ArrayCreator.array2D)
+            {
+                if (item % 5 == 0)
+                    sumOfNumbers += item;
+            }
+
+            return sumOfNumbers;
+        }
     }
 }
