@@ -214,13 +214,15 @@ namespace ConsoleAppArrayRebuilder
                 case ConsoleKey.D1:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
-
+                    MessagesViewer.WriteLine(Messages.INFO_2DS_MENU_ENTER_X);
+                    Array2DSMethods.ToZeroAboveMainDiagonalIfLowerThanX(Convert.ToInt32(Console.ReadLine()));
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     break;
 
                 case ConsoleKey.D2:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
+                    MessagesViewer.WriteLine(Messages.INFO_2DS_MENU_ENTER_X);
 
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     break;
