@@ -78,6 +78,7 @@ namespace ConsoleAppArrayRebuilder
 
         //Ошибки
         public const string ERROR_WRONG_BUTTON = "Вы нажали неверную кнопку";
-
+        public const string ERROR_WRONG_SYMBOL = "Вы ввели неверный символ, введите целове число";
+        //-----------
     }
 }
