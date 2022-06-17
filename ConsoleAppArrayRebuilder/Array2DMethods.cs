@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppArrayRebuilder
 {
-    internal class Array2D_Operations
+    internal class Array2DMethods
     {
         public static int[,] Replace1And3Lines()
         {

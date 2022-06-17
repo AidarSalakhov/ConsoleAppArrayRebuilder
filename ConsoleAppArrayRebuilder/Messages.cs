@@ -56,8 +56,12 @@ namespace ConsoleAppArrayRebuilder
 
         //Кнопка [3] Текст под кнопкой
         public const string SUM_NUMBERS_MULTIPLE_5 = "Сумма всех элементов, кратных 5: ";
-
         ///////////////////////////////////////////////////
+
+
+        //Кнопка [N] Меню действий для двумерного массива 3х3//////////////////////////////////
+        public const string INFO_2DS_MENU_TO_ZERO_AVOBE_MAIN_DIAGONAL_IF_LOWER_THAN_X = "[1] - Программа обнуляет элементы выше главной диагонали массива, которые меньше числа X";
+        public const string INFO_2DS_MENU_TO_SHOW_ELEMENTS_AVOBE_SECONDARY_DIAGONAL_IF_LOWER_THAN_X = "[2] - Программа находит элементы выше побочной диагонали массива, которые меньше числа X и выводит эти числа";
 
         //Задание размерности двумерного супер-массива
         public const string INFO_ENTER_ARRAY_HEIGH = "Введите количество строк массива:";

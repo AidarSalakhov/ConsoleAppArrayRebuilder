@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppArrayRebuilder
 {
-    internal class Array1D_Operations
+    internal class Array1DMethods
     {
         public static int SumOfEven()
         {

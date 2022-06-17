@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppArrayRebuilder
 {
-    internal class Array2DSuper_Operations
+    internal class Array2DSMethods
     {
     }
 }
