@@ -47,9 +47,9 @@ namespace ConsoleAppArrayRebuilder
         public const string INFO_2D_MENU_SUM_OF_ELEMENTS_MULTIPLE_5 = "[3] - Найти сумму всех элементов, кратных 5.";
         public const string INFO_2D_MENU_CHANGE_1_AND_3_COLUMN = "[4] - Поменять местами элементы 1-го и 3-го столбцов, вывести результат.";
         public const string INFO_2D_MENU_TO_ZERO_IF_UNDER_MAIN_DIAGONAL = "[5] - Обнулить элементы ниже главной диагонали.";
-        public const string INFO_2D_MENU_TO_ZERO_ABOVE_MAIN_DIAGONAL = "[6] - Обнулить эл. выше главной диагонали.";
-        public const string INFO_2D_MENU_TO_ZERO_IF_UNDER_SECONDARY_DIAGONAL = "[7] - Обнулить эл. элементы ниже побочной диагонали.";
-        public const string INFO_2D_MENU_TO_ZERO_IF_ABOVE_SECONDARY_DIAGONAL = "[8] - Обнулить эл. выше побочной диагонали.";
+        public const string INFO_2D_MENU_TO_ZERO_ABOVE_MAIN_DIAGONAL = "[6] - Обнулить элементы выше главной диагонали.";
+        public const string INFO_2D_MENU_TO_ZERO_IF_UNDER_SECONDARY_DIAGONAL = "[7] - Обнулить элементы элементы ниже побочной диагонали.";
+        public const string INFO_2D_MENU_TO_ZERO_IF_ABOVE_SECONDARY_DIAGONAL = "[8] - Обнулить элементы выше побочной диагонали.";
 
         //Кнопка [2] Текст под кнопкой
         public const string SUM_NUMBERS_BIGGER_THEN_9 = "Сумма всех двузначных элементов: ";
