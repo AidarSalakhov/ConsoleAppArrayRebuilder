@@ -139,7 +139,8 @@ namespace ConsoleAppArrayRebuilder
                 case ConsoleKey.D1:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
-                    
+                    Array2D_Operations.Replace1And3Lines();
+                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     break;
 
                 case ConsoleKey.D2:

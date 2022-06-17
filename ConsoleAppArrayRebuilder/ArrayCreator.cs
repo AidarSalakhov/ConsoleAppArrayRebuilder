@@ -48,6 +48,7 @@ namespace ConsoleAppArrayRebuilder
 
         public static void Print2DArray(int[,] arrayRandomNumbers)
         {
+            MessagesViewer.Write("\n");
             for (int i = 0; i < arrayRandomNumbers.GetLength(0); i++)
             {
                 for (int j = 0; j < arrayRandomNumbers.GetLength(1); j++)
@@ -59,12 +60,12 @@ namespace ConsoleAppArrayRebuilder
 
         public static void Print1DArray(int[] arrayRandomNumbers)
         {
+            MessagesViewer.Write("\n");
+
             for (int i = 0; i < arrayRandomNumbers.Length; i++)
                 MessagesViewer.Write($"[{String.Format("{0:00}", arrayRandomNumbers[i])}] ");
 
             MessagesViewer.Write("\n");
         }
-
-
     }
 }
