@@ -65,6 +65,9 @@ namespace ConsoleAppArrayRebuilder
 
         //Кнопка [1] Текст под кнопкой
         public const string INFO_2DS_MENU_ENTER_X = "Введите число X: ";
+
+        //Кнопка [2] Текст под кнопкой
+        public const string INFO_2DS_ELEMENTS_ABOVE_SECONDARY_DIAGONAL_LOWER_THAN_X = "Элементы выше побочной диагонали массива, которые меньше числа X: ";
         ///////////////////////////////////////////////////
 
         //Задание размерности двумерного супер-массива

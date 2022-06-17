@@ -29,5 +29,31 @@ namespace ConsoleAppArrayRebuilder
             ArrayCreator.array2D = newArray;
             return ArrayCreator.array2D;
         }
+
+        public static int[] AboveSecondaryDiagonalLowerThanXToArray(int x)
+        {
+            int[,] newArray = new int[ArrayCreator.array2D.GetLength(0), ArrayCreator.array2D.GetLength(1)];
+
+            List<int> list = new List<int>();
+
+            for (int i = 0, z = ArrayCreator.array2D.GetLength(1) - 1; i < ArrayCreator.array2D.GetLength(0); i++, z--)
+            {
+                for (int k = 0; k < z; k++)
+                {
+                    if (ArrayCreator.array2D[i, k] < x)
+                        list.Add(ArrayCreator.array2D[i,k]);
+                }  
+
+                for (int j = z; j < ArrayCreator.array2D.GetLength(1); j++)
+                    newArray[i, j] = ArrayCreator.array2D[i, j];
+            }
+
+            ArrayCreator.CreateAndFill1DArray(list.Count);
+
+            for (int i = 0; i < ArrayCreator.array1D.Length; i++)
+                ArrayCreator.array1D[i] = list[i];
+            
+            return ArrayCreator.array1D;
+        }
     }
 }
