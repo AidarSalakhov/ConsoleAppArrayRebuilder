@@ -31,6 +31,8 @@ namespace ConsoleAppArrayRebuilder
         public const string INFO_1D_MENU_EVEN = "[7] - Программа, которая выводит только четные элементы массива.";
         public const string INFO_1D_MENU_ODD = "[8] - Программа, которая выводит только нечетные элементы массива.";
         public const string INFO_1D_MENU_DOUBLE_TO_ZERO = "[9] - Программа, которая обнуляет двузначные элементы массива и выводит результат.";
+        public const string INFO_MENU_REFRSH_ARRAY = "[F5] - Обновить элементы массива";
+        public const string INFO_MENU_BACK_TOMAIN_MENU = "[Backspace] - Вернуться в главное меню";
 
         //Кнопка [1] Текст под кнопкой
         public const string SUM_EVEN = "Сумма чётных чисел массива: ";
@@ -78,7 +80,7 @@ namespace ConsoleAppArrayRebuilder
 
         //Ошибки
         public const string ERROR_WRONG_BUTTON = "Вы нажали неверную кнопку";
-        public const string ERROR_WRONG_SYMBOL = "Вы ввели неверный символ, введите целове число";
+        public const string ERROR_WRONG_SYMBOL = "Вы ввели неверный символ, введите целое число";
         //-----------
     }
 }

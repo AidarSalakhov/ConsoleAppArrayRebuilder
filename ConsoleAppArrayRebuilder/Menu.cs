@@ -117,6 +117,17 @@ namespace ConsoleAppArrayRebuilder
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
                     break;
 
+                case ConsoleKey.F5:
+                    Console.Clear();
+                    ArrayCreator.Print1DArray(ArrayCreator.CreateAndFill1DArray(5));
+                    Show1DMenu();
+                    break;
+
+                case ConsoleKey.Backspace:
+                    Console.Clear();
+                    ShowMainMenu();
+                    break;
+
                 case ConsoleKey.Escape:
                     Process.GetCurrentProcess().Kill();
                     break;
@@ -126,7 +137,7 @@ namespace ConsoleAppArrayRebuilder
                     MessagesViewer.Error(Messages.ERROR_WRONG_BUTTON);
                     break;
             }
-            ShowMainMenu();
+            Show1DMenu();
         }
 
         public static void Show2DMenu()
@@ -190,7 +201,18 @@ namespace ConsoleAppArrayRebuilder
                     Array2DMethods.ToZeroIfAboveSecondaryDiagonal();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     break;
-                                   
+
+                case ConsoleKey.F5:
+                    Console.Clear();
+                    ArrayCreator.Print2DArray(ArrayCreator.CreateAndFill2DArray(3,3));
+                    Show2DMenu();
+                    break;
+
+                case ConsoleKey.Backspace:
+                    Console.Clear();
+                    ShowMainMenu();
+                    break;
+
                 case ConsoleKey.Escape:
                     Process.GetCurrentProcess().Kill();
                     break;
@@ -200,7 +222,7 @@ namespace ConsoleAppArrayRebuilder
                     MessagesViewer.Error(Messages.ERROR_WRONG_BUTTON);
                     break;
             }
-            ShowMainMenu();
+            Show2DMenu();
         }
 
         public static void Show2DSMenu()
@@ -227,7 +249,18 @@ namespace ConsoleAppArrayRebuilder
                     MessagesViewer.WriteLine(Messages.INFO_2DS_ELEMENTS_ABOVE_SECONDARY_DIAGONAL_LOWER_THAN_X);
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
                     break;
-                
+
+                case ConsoleKey.F5:
+                    Console.Clear();
+                    ArrayCreator.Print2DArray(ArrayCreator.Create2DSuperArray());
+                    Show2DSMenu();
+                    break;
+
+                case ConsoleKey.Backspace:
+                    Console.Clear();
+                    ShowMainMenu();
+                    break;
+
                 case ConsoleKey.Escape:
                     Process.GetCurrentProcess().Kill();
                     break;
@@ -237,7 +270,7 @@ namespace ConsoleAppArrayRebuilder
                     MessagesViewer.Error(Messages.ERROR_WRONG_BUTTON);
                     break;
             }
-            ShowMainMenu();
+            Show2DSMenu();
         }
 
     }

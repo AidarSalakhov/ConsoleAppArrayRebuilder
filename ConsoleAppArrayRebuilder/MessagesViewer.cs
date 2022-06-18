@@ -51,7 +51,10 @@ namespace ConsoleAppArrayRebuilder
             Console.WriteLine(Messages.INFO_1D_MENU_EVEN);
             Console.WriteLine(Messages.INFO_1D_MENU_ODD);
             Console.WriteLine(Messages.INFO_1D_MENU_DOUBLE_TO_ZERO);
+            Console.WriteLine(Messages.INFO_MENU_REFRSH_ARRAY);
+            Console.WriteLine(Messages.INFO_MENU_BACK_TOMAIN_MENU);
             Console.WriteLine(Messages.INFO_MENU_BUTTON_CLOSE_PROGRAM);
+            
         }
 
         public static void Show2DMenuText()
@@ -65,6 +68,8 @@ namespace ConsoleAppArrayRebuilder
             Console.WriteLine(Messages.INFO_2D_MENU_TO_ZERO_ABOVE_MAIN_DIAGONAL);
             Console.WriteLine(Messages.INFO_2D_MENU_TO_ZERO_IF_UNDER_SECONDARY_DIAGONAL);
             Console.WriteLine(Messages.INFO_2D_MENU_TO_ZERO_IF_ABOVE_SECONDARY_DIAGONAL);
+            Console.WriteLine(Messages.INFO_MENU_REFRSH_ARRAY);
+            Console.WriteLine(Messages.INFO_MENU_BACK_TOMAIN_MENU);
             Console.WriteLine(Messages.INFO_MENU_BUTTON_CLOSE_PROGRAM);
         }
 
@@ -73,6 +78,8 @@ namespace ConsoleAppArrayRebuilder
             Console.WriteLine("\n");
             Console.WriteLine(Messages.INFO_2DS_MENU_TO_ZERO_AVOBE_MAIN_DIAGONAL_IF_LOWER_THAN_X);
             Console.WriteLine(Messages.INFO_2DS_MENU_TO_SHOW_ELEMENTS_AVOBE_SECONDARY_DIAGONAL_IF_LOWER_THAN_X);
+            Console.WriteLine(Messages.INFO_MENU_REFRSH_ARRAY);
+            Console.WriteLine(Messages.INFO_MENU_BACK_TOMAIN_MENU);
             Console.WriteLine(Messages.INFO_MENU_BUTTON_CLOSE_PROGRAM);
         }
     }
