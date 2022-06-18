@@ -36,14 +36,15 @@ namespace ConsoleAppArrayRebuilder
 
         public static int[] ReplaceMinAndMax()
         {
-            int min = ArrayCreator.array1DAfterMethodWork.Min();
-            int max = ArrayCreator.array1DAfterMethodWork.Max();
+            int[] newArray = ArrayCreator.array1D;
 
-            int indexOfMin = Array.IndexOf(ArrayCreator.array1DAfterMethodWork, min);
-            int indexOfMax = Array.IndexOf(ArrayCreator.array1DAfterMethodWork, max);
+            int indexOfMin = Array.IndexOf(newArray, newArray.Min());
+            int indexOfMax = Array.IndexOf(newArray, newArray.Max());
 
-            ArrayCreator.array1DAfterMethodWork[indexOfMin] = max;
-            ArrayCreator.array1DAfterMethodWork[indexOfMax] = min;
+            newArray[indexOfMin] = newArray.Max();
+            newArray[indexOfMax] = newArray.Min();
+
+            ArrayCreator.array1DAfterMethodWork = newArray;
 
             return ArrayCreator.array1DAfterMethodWork;
         }

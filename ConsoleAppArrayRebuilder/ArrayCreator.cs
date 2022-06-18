@@ -47,11 +47,20 @@ namespace ConsoleAppArrayRebuilder
 
         public static int[,] Create2DSuperArray()
         {
-            MessagesViewer.Info(Messages.INFO_ENTER_ARRAY_HEIGH);
-            int arrayHeigh = Convert.ToInt32(Console.ReadLine());
-            MessagesViewer.Info(Messages.INFO_ENTER_ARRAY_LENGTH);
-            int arrayLength = Convert.ToInt32(Console.ReadLine());
-            return CreateAndFill2DArray(arrayHeigh, arrayLength);
+            try
+            {
+                MessagesViewer.Info(Messages.INFO_ENTER_ARRAY_HEIGH);
+                int arrayHeigh = Convert.ToInt32(Console.ReadLine());
+                MessagesViewer.Info(Messages.INFO_ENTER_ARRAY_LENGTH);
+                int arrayLength = Convert.ToInt32(Console.ReadLine());
+                return CreateAndFill2DArray(arrayHeigh, arrayLength);
+
+            }
+            catch (Exception)
+            {
+                MessagesViewer.Error(Messages.ERROR_WRONG_SYMBOL_DEFAULT_ARRAY);
+                return CreateAndFill2DArray(3, 3);
+            }
         }
 
         public static void Print2DArray(int[,] arrayRandomNumbers)

@@ -237,7 +237,15 @@ namespace ConsoleAppArrayRebuilder
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     MessagesViewer.WriteLine(Messages.INFO_2DS_MENU_ENTER_X);
-                    Array2DSMethods.ToZeroAboveMainDiagonalIfLowerThanX(Convert.ToInt32(Console.ReadLine()));
+                    try
+                    {
+                        Array2DSMethods.ToZeroAboveMainDiagonalIfLowerThanX(Convert.ToInt32(Console.ReadLine()));
+                    }
+                    catch (Exception)
+                    {
+                        Console.Clear();
+                        MessagesViewer.Error(Messages.ERROR_WRONG_SYMBOL);
+                    }
                     ArrayCreator.Print2DArray(ArrayCreator.array2DAfterMethodWork);
                     break;
 
@@ -245,9 +253,18 @@ namespace ConsoleAppArrayRebuilder
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     MessagesViewer.WriteLine(Messages.INFO_2DS_MENU_ENTER_X);
-                    Array2DSMethods.AboveSecondaryDiagonalLowerThanXToArray(Convert.ToInt32(Console.ReadLine()));
-                    MessagesViewer.WriteLine(Messages.INFO_2DS_ELEMENTS_ABOVE_SECONDARY_DIAGONAL_LOWER_THAN_X);
-                    ArrayCreator.Print1DArray(ArrayCreator.array1DAfterMethodWork);
+                    try
+                    {
+                        Array2DSMethods.AboveSecondaryDiagonalLowerThanXToArray(Convert.ToInt32(Console.ReadLine()));
+                        MessagesViewer.WriteLine(Messages.INFO_2DS_ELEMENTS_ABOVE_SECONDARY_DIAGONAL_LOWER_THAN_X);
+                        ArrayCreator.Print1DArray(ArrayCreator.array1DAfterMethodWork);
+                    }
+                    catch (Exception)
+                    {
+                        Console.Clear();
+                        MessagesViewer.Error(Messages.ERROR_WRONG_SYMBOL);
+                        ArrayCreator.Print2DArray(ArrayCreator.array2D);
+                    }
                     break;
 
                 case ConsoleKey.F5:
