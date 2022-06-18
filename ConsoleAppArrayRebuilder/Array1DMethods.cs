@@ -12,10 +12,10 @@ namespace ConsoleAppArrayRebuilder
         {
             int evenCount = 0;
 
-            for (int i = 0; i < ArrayCreator.array1D.Length; i++)
+            for (int i = 0; i < ArrayCreator.array1DAfterMethodWork.Length; i++)
             {
-                if (ArrayCreator.array1D[i] % 2 == 0)
-                    evenCount += ArrayCreator.array1D[i];
+                if (ArrayCreator.array1DAfterMethodWork[i] % 2 == 0)
+                    evenCount += ArrayCreator.array1DAfterMethodWork[i];
             }
 
             return evenCount;
@@ -25,10 +25,10 @@ namespace ConsoleAppArrayRebuilder
         {
             int oddCount = 0;
 
-            for (int i = 0; i < ArrayCreator.array1D.Length; i++)
+            for (int i = 0; i < ArrayCreator.array1DAfterMethodWork.Length; i++)
             {
-                if (ArrayCreator.array1D[i] % 2 != 0)
-                    oddCount += ArrayCreator.array1D[i];
+                if (ArrayCreator.array1DAfterMethodWork[i] % 2 != 0)
+                    oddCount += ArrayCreator.array1DAfterMethodWork[i];
             }
 
             return oddCount;
@@ -36,16 +36,16 @@ namespace ConsoleAppArrayRebuilder
 
         public static int[] ReplaceMinAndMax()
         {
-            int min = ArrayCreator.array1D.Min();
-            int max = ArrayCreator.array1D.Max();
+            int min = ArrayCreator.array1DAfterMethodWork.Min();
+            int max = ArrayCreator.array1DAfterMethodWork.Max();
 
-            int indexOfMin = Array.IndexOf(ArrayCreator.array1D, min);
-            int indexOfMax = Array.IndexOf(ArrayCreator.array1D, max);
+            int indexOfMin = Array.IndexOf(ArrayCreator.array1DAfterMethodWork, min);
+            int indexOfMax = Array.IndexOf(ArrayCreator.array1DAfterMethodWork, max);
 
-            ArrayCreator.array1D[indexOfMin] = max;
-            ArrayCreator.array1D[indexOfMax] = min;
+            ArrayCreator.array1DAfterMethodWork[indexOfMin] = max;
+            ArrayCreator.array1DAfterMethodWork[indexOfMax] = min;
 
-            return ArrayCreator.array1D;
+            return ArrayCreator.array1DAfterMethodWork;
         }
 
         public static int EvenMin()
@@ -56,13 +56,13 @@ namespace ConsoleAppArrayRebuilder
 
         public static int OddMax()
         {
-            int[] newArray = new int[ArrayCreator.array1D.Length];
+            int[] newArray = new int[ArrayCreator.array1DAfterMethodWork.Length];
 
-            for (int i = 0, j = 0; i < ArrayCreator.array1D.Length; i++)
+            for (int i = 0, j = 0; i < ArrayCreator.array1DAfterMethodWork.Length; i++)
             {
-                if (ArrayCreator.array1D[i] % 2 != 0)
+                if (ArrayCreator.array1DAfterMethodWork[i] % 2 != 0)
                 {
-                    newArray[j] = ArrayCreator.array1D[i];
+                    newArray[j] = ArrayCreator.array1DAfterMethodWork[i];
                     j++;
                 }
             }
@@ -71,48 +71,48 @@ namespace ConsoleAppArrayRebuilder
 
         public static int[] SortFromMinToMax()
         {
-            Array.Sort(ArrayCreator.array1D);
-            return ArrayCreator.array1D;
+            Array.Sort(ArrayCreator.array1DAfterMethodWork);
+            return ArrayCreator.array1DAfterMethodWork;
         }
         
         public static int[] SortFromMaxToMin()
         {
             SortFromMinToMax();
-            Array.Reverse(ArrayCreator.array1D);
-            return ArrayCreator.array1D;
+            Array.Reverse(ArrayCreator.array1DAfterMethodWork);
+            return ArrayCreator.array1DAfterMethodWork;
         }
 
         public static int[] SortFirstEvenThenOdd()
         {
-            int[] newArray = new int[ArrayCreator.array1D.Length];
+            int[] newArray = new int[ArrayCreator.array1DAfterMethodWork.Length];
 
-            for (int i = 0, j = 0, k = ArrayCreator.array1D.Length - 1; i < ArrayCreator.array1D.Length; i++)
+            for (int i = 0, j = 0, k = ArrayCreator.array1DAfterMethodWork.Length - 1; i < ArrayCreator.array1DAfterMethodWork.Length; i++)
             {
-                if (ArrayCreator.array1D[i] % 2 == 0)
+                if (ArrayCreator.array1DAfterMethodWork[i] % 2 == 0)
                 {
-                    newArray[j] = ArrayCreator.array1D[i];
+                    newArray[j] = ArrayCreator.array1DAfterMethodWork[i];
                     j++;
                 }
                 else
                 {
-                    newArray[k] = ArrayCreator.array1D[i];
+                    newArray[k] = ArrayCreator.array1DAfterMethodWork[i];
                     k--;
                 }
             }
-            ArrayCreator.array1D = newArray;
-            return ArrayCreator.array1D;
+            ArrayCreator.array1DAfterMethodWork = newArray;
+            return ArrayCreator.array1DAfterMethodWork;
         }
 
         public static int[] CreateEvensArray()
         {
-            int[] newArray = new int[ArrayCreator.array1D.Length];
+            int[] newArray = new int[ArrayCreator.array1DAfterMethodWork.Length];
             int indexOfFirstZero = 0;
 
-            for (int i = 0, j = 0; i < ArrayCreator.array1D.Length; i++)
+            for (int i = 0, j = 0; i < ArrayCreator.array1DAfterMethodWork.Length; i++)
             {
-                if (ArrayCreator.array1D[i] % 2 == 0)
+                if (ArrayCreator.array1DAfterMethodWork[i] % 2 == 0)
                 {
-                    newArray[j] = ArrayCreator.array1D[i];
+                    newArray[j] = ArrayCreator.array1DAfterMethodWork[i];
                     j++;
                 }
 
@@ -130,14 +130,14 @@ namespace ConsoleAppArrayRebuilder
 
         public static int[] CreateOddsArray()
         {
-            int[] newArray = new int[ArrayCreator.array1D.Length];
+            int[] newArray = new int[ArrayCreator.array1DAfterMethodWork.Length];
             int indexOfFirstZero = 0;
 
-            for (int i = 0, j = 0; i < ArrayCreator.array1D.Length; i++)
+            for (int i = 0, j = 0; i < ArrayCreator.array1DAfterMethodWork.Length; i++)
             {
-                if (ArrayCreator.array1D[i] % 2 != 0)
+                if (ArrayCreator.array1DAfterMethodWork[i] % 2 != 0)
                 {
-                    newArray[j] = ArrayCreator.array1D[i];
+                    newArray[j] = ArrayCreator.array1DAfterMethodWork[i];
                     j++;
                 }
 
@@ -155,12 +155,12 @@ namespace ConsoleAppArrayRebuilder
 
         public static int[] ToZeroIfBiggerThen9()
         {
-            for (int i = 0; i < ArrayCreator.array1D.Length; i++)
+            for (int i = 0; i < ArrayCreator.array1DAfterMethodWork.Length; i++)
             {
-                if (ArrayCreator.array1D[i] > 9)
-                    ArrayCreator.array1D[i] = 0;
+                if (ArrayCreator.array1DAfterMethodWork[i] > 9)
+                    ArrayCreator.array1DAfterMethodWork[i] = 0;
             }
-            return ArrayCreator.array1D;
+            return ArrayCreator.array1DAfterMethodWork;
         }
     }
 

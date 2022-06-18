@@ -8,9 +8,13 @@ namespace ConsoleAppArrayRebuilder
 {
     internal class ArrayCreator
     {
+        public static int[] array1D = new int[0];
+
+        public static int[] array1DAfterMethodWork = new int[0];
+
         public static int[,] array2D = new int[0, 0];
 
-        public static int[] array1D = new int[0];
+        public static int[,] array2DAfterMethodWork = new int[0, 0];
 
         public static Random random = new Random();
 
@@ -21,6 +25,8 @@ namespace ConsoleAppArrayRebuilder
             for (int i = 0; i < array1D.Length; i++)
                 array1D[i] = random.Next(100);
 
+            array1DAfterMethodWork = array1D;
+
             return array1D;
         }
 
@@ -28,11 +34,13 @@ namespace ConsoleAppArrayRebuilder
         {
             array2D = new int[arrayHeigh, arrayLength];
 
-            for (int i = 0; i < array2D.GetLength(0); i++)
+            for (int i = 0; i < array2DAfterMethodWork.GetLength(0); i++)
             {
-                for (int j = 0; j < array2D.GetLength(1); j++)
-                    array2D[i, j] = random.Next(100);
+                for (int j = 0; j < array2DAfterMethodWork.GetLength(1); j++)
+                    array2DAfterMethodWork[i, j] = random.Next(100);
             }
+
+            array2DAfterMethodWork = array2D;
 
             return array2D;
         }

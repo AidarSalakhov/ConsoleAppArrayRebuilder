@@ -66,7 +66,7 @@ namespace ConsoleAppArrayRebuilder
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
                     Array1DMethods.ReplaceMinAndMax();
-                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
+                    ArrayCreator.Print1DArray(ArrayCreator.array1DAfterMethodWork);
                     break;
 
                 case ConsoleKey.D3:
@@ -80,7 +80,7 @@ namespace ConsoleAppArrayRebuilder
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
                     Array1DMethods.SortFromMinToMax();
-                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
+                    ArrayCreator.Print1DArray(ArrayCreator.array1DAfterMethodWork);
                     
                     break;
 
@@ -88,14 +88,14 @@ namespace ConsoleAppArrayRebuilder
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
                     Array1DMethods.SortFromMaxToMin();
-                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
+                    ArrayCreator.Print1DArray(ArrayCreator.array1DAfterMethodWork);
                     break;
 
                 case ConsoleKey.D6:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
                     Array1DMethods.SortFirstEvenThenOdd();
-                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
+                    ArrayCreator.Print1DArray(ArrayCreator.array1DAfterMethodWork);
                     break;
 
                 case ConsoleKey.D7:
@@ -114,7 +114,7 @@ namespace ConsoleAppArrayRebuilder
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
                     Array1DMethods.ToZeroIfBiggerThen9();
-                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
+                    ArrayCreator.Print1DArray(ArrayCreator.array1DAfterMethodWork);
                     break;
 
                 case ConsoleKey.F5:
@@ -152,7 +152,7 @@ namespace ConsoleAppArrayRebuilder
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     Array2DMethods.Replace1And3Lines();
-                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
+                    ArrayCreator.Print2DArray(ArrayCreator.array2DAfterMethodWork);
                     break;
 
                 case ConsoleKey.D2:
@@ -171,35 +171,35 @@ namespace ConsoleAppArrayRebuilder
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     Array2DMethods.Replace1And3Colums();
-                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
+                    ArrayCreator.Print2DArray(ArrayCreator.array2DAfterMethodWork);
                     break;
 
                 case ConsoleKey.D5:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     Array2DMethods.ToZeroIfUnderMainDiagonal();
-                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
+                    ArrayCreator.Print2DArray(ArrayCreator.array2DAfterMethodWork);
                     break;
 
                 case ConsoleKey.D6:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     Array2DMethods.ToZeroIfAboveMainDiagonal();
-                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
+                    ArrayCreator.Print2DArray(ArrayCreator.array2DAfterMethodWork);
                     break;
 
                 case ConsoleKey.D7:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     Array2DMethods.ToZeroIfUnderSecondaryDiagonal();
-                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
+                    ArrayCreator.Print2DArray(ArrayCreator.array2DAfterMethodWork);
                     break;
 
                 case ConsoleKey.D8:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     Array2DMethods.ToZeroIfAboveSecondaryDiagonal();
-                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
+                    ArrayCreator.Print2DArray(ArrayCreator.array2DAfterMethodWork);
                     break;
 
                 case ConsoleKey.F5:
@@ -238,7 +238,7 @@ namespace ConsoleAppArrayRebuilder
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     MessagesViewer.WriteLine(Messages.INFO_2DS_MENU_ENTER_X);
                     Array2DSMethods.ToZeroAboveMainDiagonalIfLowerThanX(Convert.ToInt32(Console.ReadLine()));
-                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
+                    ArrayCreator.Print2DArray(ArrayCreator.array2DAfterMethodWork);
                     break;
 
                 case ConsoleKey.D2:
@@ -247,7 +247,7 @@ namespace ConsoleAppArrayRebuilder
                     MessagesViewer.WriteLine(Messages.INFO_2DS_MENU_ENTER_X);
                     Array2DSMethods.AboveSecondaryDiagonalLowerThanXToArray(Convert.ToInt32(Console.ReadLine()));
                     MessagesViewer.WriteLine(Messages.INFO_2DS_ELEMENTS_ABOVE_SECONDARY_DIAGONAL_LOWER_THAN_X);
-                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
+                    ArrayCreator.Print1DArray(ArrayCreator.array1DAfterMethodWork);
                     break;
 
                 case ConsoleKey.F5:
