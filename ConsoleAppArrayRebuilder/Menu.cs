@@ -65,8 +65,7 @@ namespace ConsoleAppArrayRebuilder
                 case ConsoleKey.D2:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    Array1DMethods.ReplaceMinAndMax();
-                    ArrayCreator.Print1DArray(ArrayCreator.array1DAfterMethodWork);
+                    ArrayCreator.Print1DArray(Array1DMethods.ReplaceMinAndMax());
                     break;
 
                 case ConsoleKey.D3:
@@ -79,23 +78,19 @@ namespace ConsoleAppArrayRebuilder
                 case ConsoleKey.D4:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    Array1DMethods.SortFromMinToMax();
-                    ArrayCreator.Print1DArray(ArrayCreator.array1DAfterMethodWork);
-                    
+                    ArrayCreator.Print1DArray(Array1DMethods.SortFromMinToMax());
                     break;
 
                 case ConsoleKey.D5:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    Array1DMethods.SortFromMaxToMin();
-                    ArrayCreator.Print1DArray(ArrayCreator.array1DAfterMethodWork);
+                    ArrayCreator.Print1DArray(Array1DMethods.SortFromMaxToMin());
                     break;
 
                 case ConsoleKey.D6:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    Array1DMethods.SortFirstEvenThenOdd();
-                    ArrayCreator.Print1DArray(ArrayCreator.array1DAfterMethodWork);
+                    ArrayCreator.Print1DArray(Array1DMethods.SortFirstEvenThenOdd());
                     break;
 
                 case ConsoleKey.D7:
@@ -113,8 +108,7 @@ namespace ConsoleAppArrayRebuilder
                 case ConsoleKey.D9:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    Array1DMethods.ToZeroIfBiggerThen9();
-                    ArrayCreator.Print1DArray(ArrayCreator.array1DAfterMethodWork);
+                    ArrayCreator.Print1DArray(Array1DMethods.ToZeroIfBiggerThen9());
                     break;
 
                 case ConsoleKey.F5:

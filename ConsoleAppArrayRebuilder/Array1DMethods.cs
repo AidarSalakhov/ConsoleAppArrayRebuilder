@@ -36,17 +36,19 @@ namespace ConsoleAppArrayRebuilder
 
         public static int[] ReplaceMinAndMax()
         {
-            int[] newArray = ArrayCreator.array1D;
+            int[] newArray = new int[ArrayCreator.array1D.Length];
+            Array.Copy(ArrayCreator.array1D, newArray, newArray.Length);
 
-            int indexOfMin = Array.IndexOf(newArray, newArray.Min());
-            int indexOfMax = Array.IndexOf(newArray, newArray.Max());
+            int min = newArray.Min();
+            int max = newArray.Max();
 
-            newArray[indexOfMin] = newArray.Max();
-            newArray[indexOfMax] = newArray.Min();
+            int indexOfMin = Array.IndexOf(newArray, min);
+            int indexOfMax = Array.IndexOf(newArray, max);
 
-            ArrayCreator.array1DAfterMethodWork = newArray;
+            newArray[indexOfMin] = max;
+            newArray[indexOfMax] = min;
 
-            return ArrayCreator.array1DAfterMethodWork;
+            return newArray;
         }
 
         public static int EvenMin()
@@ -72,22 +74,24 @@ namespace ConsoleAppArrayRebuilder
 
         public static int[] SortFromMinToMax()
         {
-            Array.Sort(ArrayCreator.array1DAfterMethodWork);
-            return ArrayCreator.array1DAfterMethodWork;
+            int[] newArray = new int[ArrayCreator.array1D.Length];
+            Array.Copy(ArrayCreator.array1D, newArray, newArray.Length);
+            Array.Sort(newArray);
+            return newArray;
         }
         
         public static int[] SortFromMaxToMin()
         {
-            SortFromMinToMax();
-            Array.Reverse(ArrayCreator.array1DAfterMethodWork);
-            return ArrayCreator.array1DAfterMethodWork;
+            int[] newArray = SortFromMinToMax();
+            Array.Reverse(newArray);
+            return newArray; 
         }
 
         public static int[] SortFirstEvenThenOdd()
         {
             int[] newArray = new int[ArrayCreator.array1DAfterMethodWork.Length];
 
-            for (int i = 0, j = 0, k = ArrayCreator.array1DAfterMethodWork.Length - 1; i < ArrayCreator.array1DAfterMethodWork.Length; i++)
+            for (int i = 0, j = 0, k = newArray.Length - 1; i < newArray.Length; i++)
             {
                 if (ArrayCreator.array1DAfterMethodWork[i] % 2 == 0)
                 {
@@ -100,8 +104,8 @@ namespace ConsoleAppArrayRebuilder
                     k--;
                 }
             }
-            ArrayCreator.array1DAfterMethodWork = newArray;
-            return ArrayCreator.array1DAfterMethodWork;
+            
+            return newArray;
         }
 
         public static int[] CreateEvensArray()
@@ -156,12 +160,15 @@ namespace ConsoleAppArrayRebuilder
 
         public static int[] ToZeroIfBiggerThen9()
         {
-            for (int i = 0; i < ArrayCreator.array1DAfterMethodWork.Length; i++)
+            int[] newArray = new int[ArrayCreator.array1D.Length];
+            Array.Copy(ArrayCreator.array1D, newArray, newArray.Length);
+
+            for (int i = 0; i < newArray.Length; i++)
             {
-                if (ArrayCreator.array1DAfterMethodWork[i] > 9)
-                    ArrayCreator.array1DAfterMethodWork[i] = 0;
+                if (newArray[i] > 9)
+                    newArray[i] = 0;
             }
-            return ArrayCreator.array1DAfterMethodWork;
+            return newArray;
         }
     }
 
