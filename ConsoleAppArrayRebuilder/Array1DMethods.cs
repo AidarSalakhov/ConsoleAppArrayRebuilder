@@ -163,13 +163,16 @@ namespace ConsoleAppArrayRebuilder
 
         public static int[] ToZeroIfBiggerThen9(int[] newArray)
         {
-            for (int i = 0; i < newArray.Length; i++)
+            int[] resultArray = new int[newArray.Length];
+            Array.Copy(newArray, resultArray, newArray.Length);
+
+            for (int i = 0; i < resultArray.Length; i++)
             {
-                if (newArray[i] > 9)
-                    newArray[i] = 0;
+                if (resultArray[i] > 9)
+                    resultArray[i] = 0;
             }
 
-            return newArray;
+            return resultArray;
         }
     }
 
