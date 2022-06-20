@@ -36,16 +36,19 @@ namespace ConsoleAppArrayRebuilder
 
         public static int[] ReplaceMinAndMax(int[] newArray)
         {
+            int[] resultArray = new int[newArray.Length];
+            Array.Copy(newArray, resultArray, newArray.Length);
+            
             int min = newArray.Min();
             int max = newArray.Max();
 
             int indexOfMin = Array.IndexOf(newArray, min);
             int indexOfMax = Array.IndexOf(newArray, max);
 
-            newArray[indexOfMin] = max;
-            newArray[indexOfMax] = min;
+            resultArray[indexOfMin] = max;
+            resultArray[indexOfMax] = min;
 
-            return newArray;
+            return resultArray;
         }
 
         public static int EvenMin(int[] newArray)
@@ -71,15 +74,19 @@ namespace ConsoleAppArrayRebuilder
 
         public static int[] SortFromMinToMax(int[] newArray)
         {
-            Array.Sort(newArray);
-            return newArray;
+            int[] resultArray = new int[newArray.Length];
+            Array.Copy(newArray, resultArray, newArray.Length);
+            Array.Sort(resultArray);
+            return resultArray;
         }
         
         public static int[] SortFromMaxToMin(int[] newArray)
         {
-            newArray = SortFromMinToMax(newArray);
-            Array.Reverse(newArray);
-            return newArray; 
+            int[] resultArray = new int[newArray.Length];
+            Array.Copy(newArray, resultArray, newArray.Length);
+            resultArray = SortFromMinToMax(resultArray);
+            Array.Reverse(resultArray);
+            return resultArray; 
         }
 
         public static int[] SortFirstEvenThenOdd(int[] newArray)

@@ -251,7 +251,7 @@ namespace ConsoleAppArrayRebuilder
                     {
                         Array2DSMethods.AboveSecondaryDiagonalLowerThanXToArray(Convert.ToInt32(Console.ReadLine()));
                         MessagesViewer.WriteLine(Messages.INFO_2DS_ELEMENTS_ABOVE_SECONDARY_DIAGONAL_LOWER_THAN_X);
-                        ArrayCreator.Print1DArray(ArrayCreator.array1DAfterMethodWork);
+                        ArrayCreator.Print1DArray(ArrayCreator.array1D);
                     }
                     catch (Exception)
                     {

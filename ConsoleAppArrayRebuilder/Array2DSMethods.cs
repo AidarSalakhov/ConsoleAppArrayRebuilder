@@ -50,10 +50,10 @@ namespace ConsoleAppArrayRebuilder
 
             ArrayCreator.CreateAndFill1DArray(list.Count);
 
-            for (int i = 0; i < ArrayCreator.array1DAfterMethodWork.Length; i++)
-                ArrayCreator.array1DAfterMethodWork[i] = list[i];
+            for (int i = 0; i < ArrayCreator.array1D.Length; i++)
+                ArrayCreator.array1D[i] = list[i];
             
-            return ArrayCreator.array1DAfterMethodWork;
+            return ArrayCreator.array1D;
         }
     }
 }
