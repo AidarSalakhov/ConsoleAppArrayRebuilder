@@ -58,8 +58,8 @@ namespace ConsoleAppArrayRebuilder
                 case ConsoleKey.D1:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    MessagesViewer.WriteLine($"{Messages.SUM_EVEN}{Array1DMethods.SumOfEven(ArrayCreator.array1D)}");
-                    MessagesViewer.WriteLine($"{Messages.SUM_ODD}{Array1DMethods.SumOfOdd(ArrayCreator.array1D)}");
+                    MessagesViewer.WriteLine(Messages.SUM_EVEN + Array1DMethods.SumOfEven(ArrayCreator.array1D));
+                    MessagesViewer.WriteLine(Messages.SUM_ODD + Array1DMethods.SumOfOdd(ArrayCreator.array1D));
                     break;
 
                 case ConsoleKey.D2:
@@ -71,8 +71,8 @@ namespace ConsoleAppArrayRebuilder
                 case ConsoleKey.D3:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    MessagesViewer.WriteLine($"{Messages.EVEN_MIN}{Array1DMethods.EvenMin(ArrayCreator.array1D)}");
-                    MessagesViewer.WriteLine($"{Messages.ODD_MAX}{Array1DMethods.OddMax(ArrayCreator.array1D)}");
+                    MessagesViewer.WriteLine(Messages.EVEN_MIN + Array1DMethods.EvenMin(ArrayCreator.array1D));
+                    MessagesViewer.WriteLine(Messages.ODD_MAX + Array1DMethods.OddMax(ArrayCreator.array1D));
                     break;
 
                 case ConsoleKey.D4:
@@ -152,13 +152,13 @@ namespace ConsoleAppArrayRebuilder
                 case ConsoleKey.D2:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
-                    MessagesViewer.WriteLine($"{Messages.SUM_NUMBERS_BIGGER_THEN_9}{Array2DMethods.SumOfNumbersBiggerThen9(ArrayCreator.array2D)}");
+                    MessagesViewer.WriteLine(Messages.SUM_NUMBERS_BIGGER_THEN_9 + Array2DMethods.SumOfNumbersBiggerThen9(ArrayCreator.array2D));
                     break;
 
                 case ConsoleKey.D3:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
-                    MessagesViewer.WriteLine($"{Messages.SUM_NUMBERS_MULTIPLE_5}{Array2DMethods.SumOfNumbersMultiple5(ArrayCreator.array2D)}");
+                    MessagesViewer.WriteLine(Messages.SUM_NUMBERS_MULTIPLE_5 + Array2DMethods.SumOfNumbersMultiple5(ArrayCreator.array2D));
                     break;
 
                 case ConsoleKey.D4:

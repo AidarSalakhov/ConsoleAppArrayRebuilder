@@ -12,8 +12,6 @@ namespace ConsoleAppArrayRebuilder
 
         public static int[,] array2D = new int[0, 0];
 
-        public static int[,] array2DAfterMethodWork = new int[0, 0];
-
         public static Random random = new Random();
 
         public static int[] CreateAndFill1DArray(int arrayLength)
@@ -35,8 +33,6 @@ namespace ConsoleAppArrayRebuilder
                 for (int j = 0; j < array2D.GetLength(1); j++)
                     array2D[i, j] = random.Next(100);
             }
-
-            array2DAfterMethodWork = array2D;
 
             return array2D;
         }

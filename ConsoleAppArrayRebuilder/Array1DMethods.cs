@@ -69,6 +69,7 @@ namespace ConsoleAppArrayRebuilder
                     j++;
                 }
             }
+
             return resultArray.Max();
         }
 
@@ -167,6 +168,7 @@ namespace ConsoleAppArrayRebuilder
                 if (newArray[i] > 9)
                     newArray[i] = 0;
             }
+
             return newArray;
         }
     }
