@@ -8,36 +8,73 @@ namespace ConsoleAppArrayRebuilder
 {
     internal class ArrayCreator
     {
-        
-        public static int[,] arrayRandomNumbers = new int[0, 0];
+        public static int[] array1D = new int[0];
 
-        public static int[,] CreateAndFillArray(int arrayHeigh, int arrayLength)
+        public static int[,] array2D = new int[0, 0];
+
+        public static Random random = new Random();
+
+        public static int[] CreateAndFill1DArray(int arrayLength)
         {
-            arrayRandomNumbers = new int[arrayHeigh, arrayLength];
+            array1D = new int[arrayLength];
 
-            Random random = new Random();
+            for (int i = 0; i < array1D.Length; i++)
+                array1D[i] = random.Next(100);
 
-            for (int i = 0; i < arrayRandomNumbers.GetLength(0); i++)
-            {
-                for (int j = 0; j < arrayRandomNumbers.GetLength(1); j++)
-                {
-                    arrayRandomNumbers[i, j] = random.Next(100);
-                }
-            }
-
-            return arrayRandomNumbers;
+            return array1D;
         }
 
-        public static void PrintArray(int[,] arrayRandomNumbers)
+        public static int[,] CreateAndFill2DArray(int arrayHeigh, int arrayLength)
         {
+            array2D = new int[arrayHeigh, arrayLength];
+
+            for (int i = 0; i < array2D.GetLength(0); i++)
+            {
+                for (int j = 0; j < array2D.GetLength(1); j++)
+                    array2D[i, j] = random.Next(100);
+            }
+
+            return array2D;
+        }
+
+        public static int[,] Create2DSuperArray()
+        {
+            try
+            {
+                MessagesViewer.Info(Messages.INFO_ENTER_ARRAY_HEIGH);
+                int arrayHeigh = Convert.ToInt32(Console.ReadLine());
+                MessagesViewer.Info(Messages.INFO_ENTER_ARRAY_LENGTH);
+                int arrayLength = Convert.ToInt32(Console.ReadLine());
+                return CreateAndFill2DArray(arrayHeigh, arrayLength);
+
+            }
+            catch (Exception)
+            {
+                MessagesViewer.Error(Messages.ERROR_WRONG_SYMBOL_DEFAULT_ARRAY);
+                return CreateAndFill2DArray(3, 3);
+            }
+        }
+
+        public static void Print2DArray(int[,] arrayRandomNumbers)
+        {
+            MessagesViewer.Write("\n");
             for (int i = 0; i < arrayRandomNumbers.GetLength(0); i++)
             {
                 for (int j = 0; j < arrayRandomNumbers.GetLength(1); j++)
-                {
-                    MessagesViewer.Default($"[{Convert.ToString(arrayRandomNumbers[i,j])}] ");
-                }
-                MessagesViewer.Default("\n");
+                    MessagesViewer.Write($"[{String.Format("{0:00}", arrayRandomNumbers[i, j])}] ");
+
+                MessagesViewer.Write("\n");
             }
+        }
+
+        public static void Print1DArray(int[] arrayRandomNumbers)
+        {
+            MessagesViewer.Write("\n");
+
+            for (int i = 0; i < arrayRandomNumbers.Length; i++)
+                MessagesViewer.Write($"[{String.Format("{0:00}", arrayRandomNumbers[i])}] ");
+
+            MessagesViewer.Write("\n");
         }
     }
 }
