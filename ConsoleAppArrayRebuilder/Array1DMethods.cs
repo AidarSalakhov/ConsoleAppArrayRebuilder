@@ -8,37 +8,34 @@ namespace ConsoleAppArrayRebuilder
 {
     internal class Array1DMethods
     {
-        public static int SumOfEven()
+        public static int SumOfEven(int[] newArray)
         {
             int evenCount = 0;
 
-            for (int i = 0; i < ArrayCreator.array1DAfterMethodWork.Length; i++)
+            for (int i = 0; i < newArray.Length; i++)
             {
-                if (ArrayCreator.array1DAfterMethodWork[i] % 2 == 0)
-                    evenCount += ArrayCreator.array1DAfterMethodWork[i];
+                if (newArray[i] % 2 == 0)
+                    evenCount += newArray[i];
             }
 
             return evenCount;
         }
 
-        public static int SumOfOdd()
+        public static int SumOfOdd(int[] newArray)
         {
             int oddCount = 0;
 
-            for (int i = 0; i < ArrayCreator.array1DAfterMethodWork.Length; i++)
+            for (int i = 0; i < newArray.Length; i++)
             {
-                if (ArrayCreator.array1DAfterMethodWork[i] % 2 != 0)
-                    oddCount += ArrayCreator.array1DAfterMethodWork[i];
+                if (newArray[i] % 2 != 0)
+                    oddCount += newArray[i];
             }
 
             return oddCount;
         }
 
-        public static int[] ReplaceMinAndMax()
+        public static int[] ReplaceMinAndMax(int[] newArray)
         {
-            int[] newArray = new int[ArrayCreator.array1D.Length];
-            Array.Copy(ArrayCreator.array1D, newArray, newArray.Length);
-
             int min = newArray.Min();
             int max = newArray.Max();
 
@@ -51,118 +48,113 @@ namespace ConsoleAppArrayRebuilder
             return newArray;
         }
 
-        public static int EvenMin()
+        public static int EvenMin(int[] newArray)
         {
-            int [] newMinArray = CreateEvensArray();
-            return newMinArray.Min();
+            newArray = CreateEvensArray(newArray);
+            return newArray.Min();
         }
 
-        public static int OddMax()
+        public static int OddMax(int[] newArray)
         {
-            int[] newArray = new int[ArrayCreator.array1DAfterMethodWork.Length];
+            int[] resultArray = new int[newArray.Length];
 
-            for (int i = 0, j = 0; i < ArrayCreator.array1DAfterMethodWork.Length; i++)
+            for (int i = 0, j = 0; i < newArray.Length; i++)
             {
-                if (ArrayCreator.array1DAfterMethodWork[i] % 2 != 0)
+                if (newArray[i] % 2 != 0)
                 {
-                    newArray[j] = ArrayCreator.array1DAfterMethodWork[i];
+                    resultArray[j] = newArray[i];
                     j++;
                 }
             }
-            return newArray.Max();
+            return resultArray.Max();
         }
 
-        public static int[] SortFromMinToMax()
+        public static int[] SortFromMinToMax(int[] newArray)
         {
-            int[] newArray = new int[ArrayCreator.array1D.Length];
-            Array.Copy(ArrayCreator.array1D, newArray, newArray.Length);
             Array.Sort(newArray);
             return newArray;
         }
         
-        public static int[] SortFromMaxToMin()
+        public static int[] SortFromMaxToMin(int[] newArray)
         {
-            int[] newArray = SortFromMinToMax();
+            newArray = SortFromMinToMax(newArray);
             Array.Reverse(newArray);
             return newArray; 
         }
 
-        public static int[] SortFirstEvenThenOdd()
+        public static int[] SortFirstEvenThenOdd(int[] newArray)
         {
-            int[] newArray = new int[ArrayCreator.array1DAfterMethodWork.Length];
+            int[] resultArray = new int[newArray.Length];
 
-            for (int i = 0, j = 0, k = newArray.Length - 1; i < newArray.Length; i++)
+            for (int i = 0, j = 0, k = resultArray.Length - 1; i < resultArray.Length; i++)
             {
-                if (ArrayCreator.array1DAfterMethodWork[i] % 2 == 0)
+                if (newArray[i] % 2 == 0)
                 {
-                    newArray[j] = ArrayCreator.array1DAfterMethodWork[i];
+                    resultArray[j] = newArray[i];
                     j++;
                 }
                 else
                 {
-                    newArray[k] = ArrayCreator.array1DAfterMethodWork[i];
+                    resultArray[k] = newArray[i];
                     k--;
                 }
             }
             
-            return newArray;
+            return resultArray;
         }
 
-        public static int[] CreateEvensArray()
+        public static int[] CreateEvensArray(int[] newArray)
         {
-            int[] newArray = new int[ArrayCreator.array1DAfterMethodWork.Length];
+            int[] someArray = new int[newArray.Length];
             int indexOfFirstZero = 0;
 
-            for (int i = 0, j = 0; i < ArrayCreator.array1DAfterMethodWork.Length; i++)
+            for (int i = 0, j = 0; i < newArray.Length; i++)
             {
-                if (ArrayCreator.array1DAfterMethodWork[i] % 2 == 0)
+                if (newArray[i] % 2 == 0)
                 {
-                    newArray[j] = ArrayCreator.array1DAfterMethodWork[i];
+                    someArray[j] = newArray[i];
                     j++;
                 }
 
-                if (newArray[j] == 0)
-                    indexOfFirstZero = Array.IndexOf(newArray, newArray[j]);
+                if (someArray[j] == 0)
+                    indexOfFirstZero = Array.IndexOf(someArray, someArray[j]);
             }
 
-            int[] newMinArray = new int[indexOfFirstZero];
+            int[] resultArray = new int[indexOfFirstZero];
 
-            for (int i = 0; i < newMinArray.Length; i++)
-                newMinArray[i] = newArray[i];
+            for (int i = 0; i < resultArray.Length; i++)
+                resultArray[i] = someArray[i];
 
-            return newMinArray;
+            return resultArray;
         }
 
-        public static int[] CreateOddsArray()
+        public static int[] CreateOddsArray(int[] newArray)
         {
-            int[] newArray = new int[ArrayCreator.array1DAfterMethodWork.Length];
+            int[] someArray = new int[newArray.Length];
             int indexOfFirstZero = 0;
 
-            for (int i = 0, j = 0; i < ArrayCreator.array1DAfterMethodWork.Length; i++)
+            for (int i = 0, j = 0; i < newArray.Length; i++)
             {
-                if (ArrayCreator.array1DAfterMethodWork[i] % 2 != 0)
+                if (newArray[i] % 2 != 0)
                 {
-                    newArray[j] = ArrayCreator.array1DAfterMethodWork[i];
+                    someArray[j] = newArray[i];
                     j++;
                 }
 
-                if (newArray[j] == 0)
-                    indexOfFirstZero = Array.IndexOf(newArray, newArray[j]);
+                if (someArray[j] == 0)
+                    indexOfFirstZero = Array.IndexOf(someArray, someArray[j]);
             }
 
-            int[] newMinArray = new int[indexOfFirstZero];
+            int[] resultArray = new int[indexOfFirstZero];
 
-            for (int i = 0; i < newMinArray.Length; i++)
-                newMinArray[i] = newArray[i];
+            for (int i = 0; i < resultArray.Length; i++)
+                resultArray[i] = someArray[i];
 
-            return newMinArray;
+            return resultArray;
         }
 
-        public static int[] ToZeroIfBiggerThen9()
+        public static int[] ToZeroIfBiggerThen9(int[] newArray)
         {
-            int[] newArray = new int[ArrayCreator.array1D.Length];
-            Array.Copy(ArrayCreator.array1D, newArray, newArray.Length);
-
             for (int i = 0; i < newArray.Length; i++)
             {
                 if (newArray[i] > 9)

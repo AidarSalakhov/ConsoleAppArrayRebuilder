@@ -58,57 +58,57 @@ namespace ConsoleAppArrayRebuilder
                 case ConsoleKey.D1:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    MessagesViewer.WriteLine($"{Messages.SUM_EVEN}{Array1DMethods.SumOfEven()}");
-                    MessagesViewer.WriteLine($"{Messages.SUM_ODD}{Array1DMethods.SumOfOdd()}");
+                    MessagesViewer.WriteLine($"{Messages.SUM_EVEN}{Array1DMethods.SumOfEven(ArrayCreator.array1D)}");
+                    MessagesViewer.WriteLine($"{Messages.SUM_ODD}{Array1DMethods.SumOfOdd(ArrayCreator.array1D)}");
                     break;
 
                 case ConsoleKey.D2:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    ArrayCreator.Print1DArray(Array1DMethods.ReplaceMinAndMax());
+                    ArrayCreator.Print1DArray(Array1DMethods.ReplaceMinAndMax(ArrayCreator.array1D));
                     break;
 
                 case ConsoleKey.D3:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    MessagesViewer.WriteLine($"{Messages.EVEN_MIN}{Array1DMethods.EvenMin()}");
-                    MessagesViewer.WriteLine($"{Messages.ODD_MAX}{Array1DMethods.OddMax()}");
+                    MessagesViewer.WriteLine($"{Messages.EVEN_MIN}{Array1DMethods.EvenMin(ArrayCreator.array1D)}");
+                    MessagesViewer.WriteLine($"{Messages.ODD_MAX}{Array1DMethods.OddMax(ArrayCreator.array1D)}");
                     break;
 
                 case ConsoleKey.D4:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    ArrayCreator.Print1DArray(Array1DMethods.SortFromMinToMax());
+                    ArrayCreator.Print1DArray(Array1DMethods.SortFromMinToMax(ArrayCreator.array1D));
                     break;
 
                 case ConsoleKey.D5:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    ArrayCreator.Print1DArray(Array1DMethods.SortFromMaxToMin());
+                    ArrayCreator.Print1DArray(Array1DMethods.SortFromMaxToMin(ArrayCreator.array1D));
                     break;
 
                 case ConsoleKey.D6:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    ArrayCreator.Print1DArray(Array1DMethods.SortFirstEvenThenOdd());
+                    ArrayCreator.Print1DArray(Array1DMethods.SortFirstEvenThenOdd(ArrayCreator.array1D));
                     break;
 
                 case ConsoleKey.D7:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    ArrayCreator.Print1DArray(Array1DMethods.CreateEvensArray());
+                    ArrayCreator.Print1DArray(Array1DMethods.CreateEvensArray(ArrayCreator.array1D));
                     break;
 
                 case ConsoleKey.D8:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    ArrayCreator.Print1DArray(Array1DMethods.CreateOddsArray());
+                    ArrayCreator.Print1DArray(Array1DMethods.CreateOddsArray(ArrayCreator.array1D));
                     break;
 
                 case ConsoleKey.D9:
                     Console.Clear();
                     ArrayCreator.Print1DArray(ArrayCreator.array1D);
-                    ArrayCreator.Print1DArray(Array1DMethods.ToZeroIfBiggerThen9());
+                    ArrayCreator.Print1DArray(Array1DMethods.ToZeroIfBiggerThen9(ArrayCreator.array1D));
                     break;
 
                 case ConsoleKey.F5:
