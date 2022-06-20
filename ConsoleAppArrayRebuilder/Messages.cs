@@ -62,15 +62,12 @@ namespace ConsoleAppArrayRebuilder
         //-----------
 
 
-        //Кнопка [N] Меню действий для двумерного массива 3х3
+        //Кнопка [N] Меню действий для двумерного массива XхY
         public const string INFO_2DS_MENU_TO_ZERO_AVOBE_MAIN_DIAGONAL_IF_LOWER_THAN_X = "[1] - Программа обнуляет элементы выше главной диагонали массива, которые меньше числа X";
         public const string INFO_2DS_MENU_TO_SHOW_ELEMENTS_AVOBE_SECONDARY_DIAGONAL_IF_LOWER_THAN_X = "[2] - Программа находит элементы выше побочной диагонали массива, которые меньше числа X и выводит эти числа";
 
         //Кнопка [1] Текст под кнопкой
         public const string INFO_2DS_MENU_ENTER_X = "Введите число X: ";
-
-        //Кнопка [2] Текст под кнопкой
-        public const string INFO_2DS_ELEMENTS_ABOVE_SECONDARY_DIAGONAL_LOWER_THAN_X = "Элементы выше побочной диагонали массива, которые меньше числа X: ";
 
         //Задание размерности двумерного супер-массива
         public const string INFO_ENTER_ARRAY_HEIGH = "Введите количество строк массива:";

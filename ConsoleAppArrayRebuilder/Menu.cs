@@ -129,6 +129,7 @@ namespace ConsoleAppArrayRebuilder
                 default:
                     Console.Clear();
                     MessagesViewer.Error(Messages.ERROR_WRONG_BUTTON);
+                    ArrayCreator.Print1DArray(ArrayCreator.array1D);
                     break;
             }
             Show1DMenu();
@@ -145,55 +146,49 @@ namespace ConsoleAppArrayRebuilder
                 case ConsoleKey.D1:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
-                    Array2DMethods.Replace1And3Lines();
-                    ArrayCreator.Print2DArray(ArrayCreator.array2DAfterMethodWork);
+                    ArrayCreator.Print2DArray(Array2DMethods.Replace1And3Lines(ArrayCreator.array2D));
                     break;
 
                 case ConsoleKey.D2:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
-                    MessagesViewer.WriteLine($"{Messages.SUM_NUMBERS_BIGGER_THEN_9}{Array2DMethods.SumOfNumbersBiggerThen9()}");
+                    MessagesViewer.WriteLine($"{Messages.SUM_NUMBERS_BIGGER_THEN_9}{Array2DMethods.SumOfNumbersBiggerThen9(ArrayCreator.array2D)}");
                     break;
 
                 case ConsoleKey.D3:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
-                    MessagesViewer.WriteLine($"{Messages.SUM_NUMBERS_MULTIPLE_5}{Array2DMethods.SumOfNumbersMultiple5()}");
+                    MessagesViewer.WriteLine($"{Messages.SUM_NUMBERS_MULTIPLE_5}{Array2DMethods.SumOfNumbersMultiple5(ArrayCreator.array2D)}");
                     break;
 
                 case ConsoleKey.D4:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
-                    Array2DMethods.Replace1And3Colums();
-                    ArrayCreator.Print2DArray(ArrayCreator.array2DAfterMethodWork);
+                    ArrayCreator.Print2DArray(Array2DMethods.Replace1And3Colums(ArrayCreator.array2D));
                     break;
 
                 case ConsoleKey.D5:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
-                    Array2DMethods.ToZeroIfUnderMainDiagonal();
-                    ArrayCreator.Print2DArray(ArrayCreator.array2DAfterMethodWork);
+                    ArrayCreator.Print2DArray(Array2DMethods.ToZeroIfUnderMainDiagonal(ArrayCreator.array2D));
                     break;
 
                 case ConsoleKey.D6:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
-                    Array2DMethods.ToZeroIfAboveMainDiagonal();
-                    ArrayCreator.Print2DArray(ArrayCreator.array2DAfterMethodWork);
+                    ArrayCreator.Print2DArray(Array2DMethods.ToZeroIfAboveMainDiagonal(ArrayCreator.array2D));
                     break;
 
                 case ConsoleKey.D7:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
-                    Array2DMethods.ToZeroIfUnderSecondaryDiagonal();
-                    ArrayCreator.Print2DArray(ArrayCreator.array2DAfterMethodWork);
+                    ArrayCreator.Print2DArray(Array2DMethods.ToZeroIfUnderSecondaryDiagonal(ArrayCreator.array2D));
                     break;
 
                 case ConsoleKey.D8:
                     Console.Clear();
                     ArrayCreator.Print2DArray(ArrayCreator.array2D);
-                    Array2DMethods.ToZeroIfAboveSecondaryDiagonal();
-                    ArrayCreator.Print2DArray(ArrayCreator.array2DAfterMethodWork);
+                    ArrayCreator.Print2DArray(Array2DMethods.ToZeroIfAboveSecondaryDiagonal(ArrayCreator.array2D));
                     break;
 
                 case ConsoleKey.F5:
@@ -214,6 +209,7 @@ namespace ConsoleAppArrayRebuilder
                 default:
                     Console.Clear();
                     MessagesViewer.Error(Messages.ERROR_WRONG_BUTTON);
+                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     break;
             }
             Show2DMenu();
@@ -233,14 +229,15 @@ namespace ConsoleAppArrayRebuilder
                     MessagesViewer.WriteLine(Messages.INFO_2DS_MENU_ENTER_X);
                     try
                     {
-                        Array2DSMethods.ToZeroAboveMainDiagonalIfLowerThanX(Convert.ToInt32(Console.ReadLine()));
+                        ArrayCreator.Print2DArray(Array2DSMethods.ToZeroAboveMainDiagonalIfLowerThanX(Convert.ToInt32(Console.ReadLine()), ArrayCreator.array2D));
                     }
                     catch (Exception)
                     {
                         Console.Clear();
                         MessagesViewer.Error(Messages.ERROR_WRONG_SYMBOL);
+                        ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     }
-                    ArrayCreator.Print2DArray(ArrayCreator.array2DAfterMethodWork);
+                    
                     break;
 
                 case ConsoleKey.D2:
@@ -249,9 +246,7 @@ namespace ConsoleAppArrayRebuilder
                     MessagesViewer.WriteLine(Messages.INFO_2DS_MENU_ENTER_X);
                     try
                     {
-                        Array2DSMethods.AboveSecondaryDiagonalLowerThanXToArray(Convert.ToInt32(Console.ReadLine()));
-                        MessagesViewer.WriteLine(Messages.INFO_2DS_ELEMENTS_ABOVE_SECONDARY_DIAGONAL_LOWER_THAN_X);
-                        ArrayCreator.Print1DArray(ArrayCreator.array1D);
+                        ArrayCreator.Print1DArray(Array2DSMethods.AboveSecondaryDiagonalLowerThanXToArray(Convert.ToInt32(Console.ReadLine()), ArrayCreator.array2D));
                     }
                     catch (Exception)
                     {
@@ -279,6 +274,7 @@ namespace ConsoleAppArrayRebuilder
                 default:
                     Console.Clear();
                     MessagesViewer.Error(Messages.ERROR_WRONG_BUTTON);
+                    ArrayCreator.Print2DArray(ArrayCreator.array2D);
                     break;
             }
             Show2DSMenu();

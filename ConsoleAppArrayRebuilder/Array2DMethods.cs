@@ -8,25 +8,24 @@ namespace ConsoleAppArrayRebuilder
 {
     internal class Array2DMethods
     {
-        public static int[,] Replace1And3Lines()
+        public static int[,] Replace1And3Lines(int[,] newArray)
         {
-            int[,] newArray = new int[ArrayCreator.array2DAfterMethodWork.GetLength(0), ArrayCreator.array2DAfterMethodWork.GetLength(1)];
+            int[,] resultArray = new int[newArray.GetLength(0), newArray.GetLength(1)];
 
-            for (int i = ArrayCreator.array2DAfterMethodWork.GetLength(0) - 1, k = 0; i >= 0; i--, k++)
+            for (int i = newArray.GetLength(0) - 1, k = 0; i >= 0; i--, k++)
             {
-                for (int j = 0; j < ArrayCreator.array2DAfterMethodWork.GetLength(1); j++)
-                    newArray[i, j] = ArrayCreator.array2DAfterMethodWork[k,j];
+                for (int j = 0; j < newArray.GetLength(1); j++)
+                    resultArray[i, j] = newArray[k,j];
             }
 
-            ArrayCreator.array2DAfterMethodWork = newArray;
-            return ArrayCreator.array2DAfterMethodWork;
+            return resultArray;
         }
 
-        public static int SumOfNumbersBiggerThen9()
+        public static int SumOfNumbersBiggerThen9(int[,] newArray)
         {
             int sumOfNumbers = 0;
 
-            foreach (var item in ArrayCreator.array2DAfterMethodWork)
+            foreach (var item in newArray)
             {
                 if (item > 9)
                     sumOfNumbers += item;
@@ -35,11 +34,11 @@ namespace ConsoleAppArrayRebuilder
             return sumOfNumbers;
         }
 
-        public static int SumOfNumbersMultiple5()
+        public static int SumOfNumbersMultiple5(int[,] newArray)
         {
             int sumOfNumbers = 0;
 
-            foreach (var item in ArrayCreator.array2DAfterMethodWork)
+            foreach (var item in newArray)
             {
                 if (item % 5 == 0)
                     sumOfNumbers += item;
@@ -48,85 +47,81 @@ namespace ConsoleAppArrayRebuilder
             return sumOfNumbers;
         }
 
-        public static int[,] Replace1And3Colums()
+        public static int[,] Replace1And3Colums(int[,] newArray)
         {
-            int[,] newArray = new int[ArrayCreator.array2DAfterMethodWork.GetLength(0), ArrayCreator.array2DAfterMethodWork.GetLength(1)];
+            int[,] resultArray = new int[newArray.GetLength(0), newArray.GetLength(1)];
 
-            for (int i = 0; i < ArrayCreator.array2DAfterMethodWork.GetLength(0); i++)
+            for (int i = 0; i < newArray.GetLength(0); i++)
             {
-                for (int j = ArrayCreator.array2DAfterMethodWork.GetLength(1) - 1, k = 0; j >= 0; j--, k++)
-                    newArray[i, k] = ArrayCreator.array2DAfterMethodWork[i, j];
+                for (int j = newArray.GetLength(1) - 1, k = 0; j >= 0; j--, k++)
+                    resultArray[i, k] = newArray[i, j];
             }
                 
-            ArrayCreator.array2DAfterMethodWork = newArray;
-            return ArrayCreator.array2DAfterMethodWork;
+            return resultArray;
         }
 
-        public static int[,] ToZeroIfUnderMainDiagonal()
+        public static int[,] ToZeroIfUnderMainDiagonal(int[,] newArray)
         {
-            int[,] newArray = new int[ArrayCreator.array2DAfterMethodWork.GetLength(0), ArrayCreator.array2DAfterMethodWork.GetLength(1)];
+            int[,] resultArray = new int[newArray.GetLength(0), newArray.GetLength(1)];
 
-            for (int i = 0; i < ArrayCreator.array2DAfterMethodWork.GetLength(0); i++)
+            for (int i = 0; i < newArray.GetLength(0); i++)
             {
                 for (int k = 0; k < i; k++)
-                    newArray[i, k] = 0;
+                    resultArray[i, k] = 0;
 
-                for (int j = i; j < ArrayCreator.array2DAfterMethodWork.GetLength(1); j++)
-                    newArray[i, j] = ArrayCreator.array2DAfterMethodWork[i, j];
+                for (int j = i; j < newArray.GetLength(1); j++)
+                    resultArray[i, j] = newArray[i, j];
             }
-            ArrayCreator.array2DAfterMethodWork = newArray;
-            return ArrayCreator.array2DAfterMethodWork;
+
+            return resultArray;
         }
 
-        public static int[,] ToZeroIfAboveMainDiagonal()
+        public static int[,] ToZeroIfAboveMainDiagonal(int[,] newArray)
         {
-            int[,] newArray = new int[ArrayCreator.array2DAfterMethodWork.GetLength(0), ArrayCreator.array2DAfterMethodWork.GetLength(1)];
+            int[,] resultArray = new int[newArray.GetLength(0), newArray.GetLength(1)];
 
-            for (int i = 0; i < ArrayCreator.array2DAfterMethodWork.GetLength(0); i++)
+            for (int i = 0; i < newArray.GetLength(0); i++)
             {
                 for (int k = 0; k <= i; k++)
-                    newArray[i, k] = ArrayCreator.array2DAfterMethodWork[i, k];
+                    resultArray[i, k] = newArray[i, k];
 
-                for (int j = i + 1; j < ArrayCreator.array2DAfterMethodWork.GetLength(1); j++)
-                    newArray[i, j] = 0;
+                for (int j = i + 1; j < newArray.GetLength(1); j++)
+                    resultArray[i, j] = 0;
             }
 
-            ArrayCreator.array2DAfterMethodWork = newArray;
-            return ArrayCreator.array2DAfterMethodWork;
+            return resultArray;
         }
 
-        public static int[,] ToZeroIfUnderSecondaryDiagonal()
+        public static int[,] ToZeroIfUnderSecondaryDiagonal(int[,] newArray)
         {
-            int[,] newArray = new int[ArrayCreator.array2DAfterMethodWork.GetLength(0), ArrayCreator.array2DAfterMethodWork.GetLength(1)];
+            int[,] resultArray = new int[newArray.GetLength(0), newArray.GetLength(1)];
 
-            for (int i = 0, z = ArrayCreator.array2DAfterMethodWork.GetLength(1); i < ArrayCreator.array2DAfterMethodWork.GetLength(0); i++, z--)
+            for (int i = 0, z = newArray.GetLength(1); i < newArray.GetLength(0); i++, z--)
             {
                 for (int k = 0; k < z; k++)
-                    newArray[i, k] = ArrayCreator.array2DAfterMethodWork[i, k];
+                    resultArray[i, k] = newArray[i, k];
 
-                for (int j = z; j < ArrayCreator.array2DAfterMethodWork.GetLength(1); j++)
-                    newArray[i, j] = 0;
+                for (int j = z; j < newArray.GetLength(1); j++)
+                    resultArray[i, j] = 0;
             }
 
-            ArrayCreator.array2DAfterMethodWork = newArray;
-            return ArrayCreator.array2DAfterMethodWork;
+            return resultArray;
         }
 
-        public static int[,] ToZeroIfAboveSecondaryDiagonal()
+        public static int[,] ToZeroIfAboveSecondaryDiagonal(int[,] newArray)
         {
-            int[,] newArray = new int[ArrayCreator.array2DAfterMethodWork.GetLength(0), ArrayCreator.array2DAfterMethodWork.GetLength(1)];
+            int[,] resultArray = new int[newArray.GetLength(0), newArray.GetLength(1)];
 
-            for (int i = 0, z = ArrayCreator.array2DAfterMethodWork.GetLength(1) - 1; i < ArrayCreator.array2DAfterMethodWork.GetLength(0); i++, z--)
+            for (int i = 0, z = newArray.GetLength(1) - 1; i < newArray.GetLength(0); i++, z--)
             {
                 for (int k = 0; k < z; k++)
-                    newArray[i, k] = 0;
+                    resultArray[i, k] = 0;
                 
-                for (int j = z; j < ArrayCreator.array2DAfterMethodWork.GetLength(1); j++)
-                    newArray[i, j] = ArrayCreator.array2DAfterMethodWork[i, j];
+                for (int j = z; j < newArray.GetLength(1); j++)
+                    resultArray[i, j] = newArray[i, j];
             }
 
-            ArrayCreator.array2DAfterMethodWork = newArray;
-            return ArrayCreator.array2DAfterMethodWork;
+            return resultArray;
         }
     }
 }
